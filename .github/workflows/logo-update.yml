@@ -1,0 +1,48 @@
+name: Apply logo update
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-logo:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update logo layout
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old = '''<div class="w-12 h-12 bg-white/90 rounded-2xl flex items-center justify-center p-1.5 border border-teal-200 shadow-sm overflow-hidden transform hover:scale-105 transition">'''
+          new = '''<div class="w-16 h-16 sm:w-[76px] sm:h-[76px] bg-white/95 rounded-2xl flex items-center justify-center p-1.5 border border-teal-200 shadow-lg shadow-teal-900/10 overflow-hidden transform hover:scale-105 transition">'''
+          if old not in s:
+              raise SystemExit('Header logo container not found')
+          s = s.replace(old, new, 1)
+          old_footer = '''            <div class="border-t border-slate-900 pt-8 text-center text-xs text-slate-500">'''
+          new_footer = '''            <!-- Large Association Logo -->
+            <div class="flex justify-center mb-10">
+                <div class="w-40 h-40 sm:w-52 sm:h-52 bg-white rounded-[2rem] flex items-center justify-center p-4 shadow-2xl border border-white/20 overflow-hidden">
+                    <img src="logo.png" alt="شعار جمعية الساعي على الأرملة" class="w-full h-full object-contain">
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-8 text-center text-xs text-slate-500">'''
+          if old_footer not in s:
+              raise SystemExit('Footer marker not found')
+          s = s.replace(old_footer, new_footer, 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit changes and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html .github/workflows/logo-update.yml
+          git rm .github/workflows/logo-update.yml
+          git commit -m "تكبير شعار الجمعية وإضافة شعار كبير أسفل الموقع"
+          git push
