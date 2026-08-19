@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>جمعية الساعي على الأرملة بمحافظة البكيرية | الموقع الرسمي التفاعلي</title>
-    <!-- Tailwind CSS CDN -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Cairo) -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -32,6 +31,7 @@
             }
         }
     </script>
+
     <style>
         body {
             font-family: 'Cairo', sans-serif;
@@ -39,7 +39,7 @@
             color: #1e293b;
             overflow-x: hidden;
         }
-        /* Ultra Glassmorphism Effects */
+
         .glass-card {
             background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(24px);
@@ -47,19 +47,25 @@
             border: 1px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 8px 32px 0 rgba(15, 118, 110, 0.1);
         }
+
         .glass-card:hover {
             background: rgba(255, 255, 255, 0.88);
             box-shadow: 0 12px 40px 0 rgba(15, 118, 110, 0.2);
         }
+
         .glass-nav {
             background: rgba(255, 255, 255, 0.82);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border-bottom: 1px solid rgba(226, 232, 240, 0.6);
         }
+
         .glass-hero {
-            background: linear-gradient(135deg, rgba(11, 37, 35, 0.95), rgba(15, 118, 110, 0.90)), url('https://placehold.co/1920x1080/0f766e/ffffff?text=Al-Bukayriyah+Charity') center/cover fixed no-repeat;
+            background: linear-gradient(135deg, rgba(11, 37, 35, 0.95), rgba(15, 118, 110, 0.90)),
+            url('https://placehold.co/1920x1080/0f766e/ffffff?text=Al-Bukayriyah+Charity')
+            center/cover fixed no-repeat;
         }
+
         .blob-bg {
             position: absolute;
             width: 450px;
@@ -70,41 +76,62 @@
             z-index: -1;
             animation: floatBlob 10s ease-in-out infinite alternate;
         }
+
         @keyframes floatBlob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            100% { transform: translate(30px, -40px) scale(1.1); }
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            100% {
+                transform: translate(30px, -40px) scale(1.1);
+            }
         }
+
         ::-webkit-scrollbar {
             width: 10px;
         }
+
         ::-webkit-scrollbar-track {
             background: #f1f5f9;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #0f766e;
             border-radius: 5px;
         }
     </style>
 </head>
+
 <body class="antialiased selection:bg-teal-500 selection:text-white">
 
-    <!-- Background Decorative Blobs -->
     <div class="blob-bg top-20 right-10"></div>
     <div class="blob-bg bottom-40 left-10" style="animation-delay: 5s;"></div>
 
-    <!-- Header / Navbar -->
+    <!-- Header -->
     <header class="glass-nav sticky top-0 z-50 transition-all duration-300 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
             <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-12 h-12 bg-white/90 rounded-2xl flex items-center justify-center p-1.5 border border-teal-200 shadow-sm overflow-hidden transform hover:scale-105 transition">
-                    <img src="logo.png" alt="شعار جمعية الساعي على الأرملة" class="w-full h-full object-contain">
+
+                <!-- شعار الجمعية مكبر -->
+                <div class="w-16 h-16 sm:w-[76px] sm:h-[76px] bg-white/95 rounded-2xl flex items-center justify-center p-1.5 border border-teal-200 shadow-lg shadow-teal-900/10 overflow-hidden transform hover:scale-105 transition">
+                    <img src="logo.png"
+                         alt="شعار جمعية الساعي على الأرملة بالبكيرية"
+                         class="w-full h-full object-contain"
+                         onerror="this.src='https://placehold.co/150x150/0f766e/ffffff?text=الساعي'">
                 </div>
+
                 <div>
-                    <h1 class="font-extrabold text-sm sm:text-base text-slate-900 leading-tight">جمعية الساعي على الأرملة</h1>
-                    <p class="text-[11px] text-teal-700 font-bold tracking-wide">بمحافظة البكيرية (مرخصة رسمياً)</p>
+                    <h1 class="font-extrabold text-sm sm:text-base text-slate-900 leading-tight">
+                        جمعية الساعي على الأرملة
+                    </h1>
+                    <p class="text-[11px] text-teal-700 font-bold tracking-wide">
+                        بمحافظة البكيرية (مرخصة رسمياً)
+                    </p>
                 </div>
+
             </div>
-            
+
             <nav class="hidden lg:flex items-center space-x-7 space-x-reverse font-semibold text-sm text-slate-600">
                 <a href="#about" class="hover:text-teal-700 transition">عن الجمعية</a>
                 <a href="#services" class="hover:text-teal-700 transition">خدماتنا التنموية</a>
@@ -115,418 +142,888 @@
             </nav>
 
             <div class="flex items-center space-x-3 space-x-reverse">
-                <a href="#donate" class="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-5 py-2.5 rounded-2xl font-bold text-sm shadow-lg shadow-teal-600/30 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                <a href="#donate"
+                   class="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-5 py-2.5 rounded-2xl font-bold text-sm shadow-lg shadow-teal-600/30 transition transform hover:-translate-y-0.5 flex items-center gap-2">
                     <i class="fa-solid fa-hand-holding-heart animate-pulse"></i>
                     <span>تبرع سريع</span>
                 </a>
-                <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-700 hover:text-teal-700 text-2xl p-1.5">
+
+                <button onclick="toggleMobileMenu()"
+                        class="lg:hidden text-slate-700 hover:text-teal-700 text-2xl p-1.5">
                     <i class="fa-solid fa-bars" id="menuIcon"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden glass-card border-t border-slate-200 px-6 pt-4 pb-6 space-y-3">
-            <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">عن الجمعية</a>
-            <a href="#services" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">خدماتنا التنموية</a>
-            <a href="#calculator" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">حاسبة التبرع والزكاة</a>
-            <a href="#projects" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">المشاريع</a>
-            <a href="#beneficiary" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">طلب مساعدة</a>
-            <a href="#faq" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">الأسئلة الشائعة</a>
+        <div id="mobileMenu"
+             class="hidden lg:hidden glass-card border-t border-slate-200 px-6 pt-4 pb-6 space-y-3">
+
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">
+                عن الجمعية
+            </a>
+
+            <a href="#services" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">
+                خدماتنا التنموية
+            </a>
+
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">
+                حاسبة التبرع والزكاة
+            </a>
+
+            <a href="#projects" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">
+                المشاريع
+            </a>
+
+            <a href="#beneficiary" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">
+                طلب مساعدة
+            </a>
+
+            <a href="#faq" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">
+                الأسئلة الشائعة
+            </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="glass-hero text-white py-24 lg:py-36 relative overflow-hidden">
+
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+
             <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md text-teal-100 text-xs sm:text-sm font-semibold px-5 py-2 rounded-full mb-6 border border-white/20 shadow-inner">
                 <i class="fa-solid fa-star text-amber-300"></i>
                 <span>الساعي على الأرملة كالمجاهد في سبيل الله</span>
             </div>
+
             <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6 max-w-4xl mx-auto leading-tight drop-shadow-md">
                 تمكين، كرامة، واستقرار مستدام للأسر بالبكيرية
             </h1>
+
             <p class="text-lg sm:text-xl text-slate-100 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                 مؤسسة خيرية تخصصية تسعى لتقديم الرعاية الشاملة للأرامل والأيتام وفق أعلى معايير الحوكمة والشفافية بمنطقة القصيم.
             </p>
+
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#donate" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-2xl shadow-2xl transition transform hover:-translate-y-1 text-base flex items-center justify-center gap-3">
+
+                <a href="#donate"
+                   class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-2xl shadow-2xl transition transform hover:-translate-y-1 text-base flex items-center justify-center gap-3">
                     <i class="fa-solid fa-gift text-lg"></i>
                     <span>ساهم معنا في الدعم</span>
                 </a>
-                <a href="#calculator" class="glass-card hover:bg-white/20 text-white font-bold px-8 py-4 rounded-2xl transition text-base flex items-center justify-center gap-2 border-white/30">
+
+                <a href="#calculator"
+                   class="glass-card hover:bg-white/20 text-white font-bold px-8 py-4 rounded-2xl transition text-base flex items-center justify-center gap-2 border-white/30">
                     <i class="fa-solid fa-calculator"></i>
                     <span>حاسبة التبرع التفاعلية</span>
                 </a>
+
             </div>
         </div>
     </section>
 
-    <!-- Impact Stats Bar -->
+    <!-- Impact Stats -->
     <section id="impact" class="max-w-6xl mx-auto px-4 relative z-20 -mt-12 mb-20">
+
         <div class="glass-card rounded-3xl p-6 sm:p-10 shadow-2xl border border-white/90 grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-x-reverse divide-slate-200/60">
+
             <div class="p-2 transform hover:scale-105 transition">
                 <div class="text-3xl lg:text-5xl font-black text-teal-700 mb-1">+450</div>
                 <div class="text-xs sm:text-sm text-slate-600 font-bold">أرملة مستفيدة برعاية كاملة</div>
             </div>
+
             <div class="p-2 transform hover:scale-105 transition">
                 <div class="text-3xl lg:text-5xl font-black text-cyan-600 mb-1">+1,200</div>
                 <div class="text-xs sm:text-sm text-slate-600 font-bold">يتيم تحت الرعاية والتعليم</div>
             </div>
+
             <div class="p-2 transform hover:scale-105 transition">
                 <div class="text-3xl lg:text-5xl font-black text-amber-600 mb-1">+15</div>
                 <div class="text-xs sm:text-sm text-slate-600 font-bold">برنامج ومبادرة تنموية</div>
             </div>
+
             <div class="p-2 transform hover:scale-105 transition">
                 <div class="text-3xl lg:text-5xl font-black text-emerald-800 mb-1">100%</div>
                 <div class="text-xs sm:text-sm text-slate-600 font-bold">شفافية وإفصاح مالي معتمد</div>
             </div>
+
         </div>
     </section>
 
-    <!-- Interactive Calculator -->
+    <!-- Calculator -->
     <section id="calculator" class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+
         <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl border border-teal-100">
+
             <div class="text-center max-w-2xl mx-auto mb-10">
-                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200">أدوات ذكية</span>
-                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-3 mb-2">حاسبة التبرع والزكاة التفاعلية</h2>
-                <p class="text-slate-600 text-sm">حدد نوع المساهمة والمبلغ لشاهد الأثر المباشر الذي تقدمه للأسر المستحقة.</p>
+                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200">
+                    أدوات ذكية
+                </span>
+
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-3 mb-2">
+                    حاسبة التبرع والزكاة التفاعلية
+                </h2>
+
+                <p class="text-slate-600 text-sm">
+                    حدد نوع المساهمة والمبلغ لشاهد الأثر المباشر الذي تقدمه للأسر المستحقة.
+                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
                 <div class="space-y-6">
+
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">اختر نوع المساهمة:</label>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">
+                            اختر نوع المساهمة:
+                        </label>
+
                         <div class="grid grid-cols-3 gap-3">
-                            <button type="button" onclick="setCalcType('zakat')" id="btnZakat" class="p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md">زكاة مال</button>
-                            <button type="button" onclick="setCalcType('sadaqah')" id="btnSadaqah" class="p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500">صدقة عامة</button>
-                            <button type="button" onclick="setCalcType('kefalah')" id="btnKefalah" class="p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500">كفالة أسرة</button>
+
+                            <button type="button"
+                                    onclick="setCalcType('zakat')"
+                                    id="btnZakat"
+                                    class="p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md">
+                                زكاة مال
+                            </button>
+
+                            <button type="button"
+                                    onclick="setCalcType('sadaqah')"
+                                    id="btnSadaqah"
+                                    class="p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500">
+                                صدقة عامة
+                            </button>
+
+                            <button type="button"
+                                    onclick="setCalcType('kefalah')"
+                                    id="btnKefalah"
+                                    class="p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500">
+                                كفالة أسرة
+                            </button>
+
                         </div>
                     </div>
 
                     <div>
+
                         <div class="flex justify-between items-center mb-2">
-                            <label class="text-sm font-bold text-slate-700">المبلغ المقترح (ريال سعودي):</label>
-                            <span id="amountDisplay" class="font-black text-teal-700 text-lg">500 ر.س</span>
+                            <label class="text-sm font-bold text-slate-700">
+                                المبلغ المقترح (ريال سعودي):
+                            </label>
+
+                            <span id="amountDisplay" class="font-black text-teal-700 text-lg">
+                                500 ر.س
+                            </span>
                         </div>
-                        <input type="range" id="amountRange" min="50" max="5000" step="50" value="500" oninput="updateCalculator(this.value)" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-teal-600">
+
+                        <input type="range"
+                               id="amountRange"
+                               min="50"
+                               max="5000"
+                               step="50"
+                               value="500"
+                               oninput="updateCalculator(this.value)"
+                               class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-teal-600">
+
                         <div class="flex justify-between text-xs text-slate-400 mt-1">
                             <span>50 ر.س</span>
                             <span>2,500 ر.س</span>
                             <span>5,000 ر.س</span>
                         </div>
+
                     </div>
 
                     <div class="flex gap-2 flex-wrap">
-                        <button onclick="quickAmount(100)" class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">100 ر.س</button>
-                        <button onclick="quickAmount(500)" class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">500 ر.س</button>
-                        <button onclick="quickAmount(1000)" class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">1,000 ر.س</button>
-                        <button onclick="quickAmount(3000)" class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">3,000 ر.س</button>
+
+                        <button onclick="quickAmount(100)"
+                                class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">
+                            100 ر.س
+                        </button>
+
+                        <button onclick="quickAmount(500)"
+                                class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">
+                            500 ر.س
+                        </button>
+
+                        <button onclick="quickAmount(1000)"
+                                class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">
+                            1,000 ر.س
+                        </button>
+
+                        <button onclick="quickAmount(3000)"
+                                class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">
+                            3,000 ر.س
+                        </button>
+
                     </div>
                 </div>
 
                 <div class="bg-gradient-to-br from-teal-900 to-cyan-900 text-white p-8 rounded-3xl shadow-xl flex flex-col justify-between">
+
                     <div>
+
                         <div class="flex items-center gap-2 text-teal-300 text-xs font-bold mb-4">
                             <i class="fa-solid fa-chart-line"></i>
                             <span>قياس الأثر المتوقع لمساهمتك</span>
                         </div>
-                        <h3 class="text-xl font-black mb-3" id="impactTitle">كفالة جزئية ودعم معيشي</h3>
+
+                        <h3 class="text-xl font-black mb-3" id="impactTitle">
+                            كفالة جزئية ودعم معيشي
+                        </h3>
+
                         <p class="text-slate-200 text-sm leading-relaxed mb-6" id="impactDesc">
                             هذا المبلغ يساهم في سداد متطلبات شهرية رئيسية لأسرة أرملة محتاجة في محافظة البكيرية مع إدخال السرور على قلوب الأبناء.
                         </p>
+
                     </div>
-                    <button onclick="executeDonationFromCalc()" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3.5 rounded-2xl transition shadow-xl flex items-center justify-center gap-2">
+
+                    <button onclick="executeDonationFromCalc()"
+                            class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3.5 rounded-2xl transition shadow-xl flex items-center justify-center gap-2">
+
                         <i class="fa-solid fa-heart"></i>
-                        <span id="donateBtnText">تبرع بـ 500 ر.س الآن</span>
+
+                        <span id="donateBtnText">
+                            تبرع بـ 500 ر.س الآن
+                        </span>
+
                     </button>
+
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
             <div>
-                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-100">من نحن</span>
+
+                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-100">
+                    من نحن
+                </span>
+
                 <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-4 mb-6 leading-tight">
                     نبني جسور الأمل والدعم المستدام في محافظة البكيرية
                 </h2>
+
                 <p class="text-slate-600 leading-relaxed mb-6 text-sm sm:text-base">
                     نحن جمعية "الساعي على الأرملة" مسجلة رسمياً بمحافظة البكيرية، نكرس جهودنا لتقديم الرعاية الشاملة والعناية الفائقة بالأرامل وأسرهن عبر المساعدات النقدية والعينية، وبرامج التأهيل المهني والتمكين المعيشي.
                 </p>
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
                     <div class="glass-card p-5 rounded-2xl border border-slate-100 shadow-sm">
+
                         <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-3">
                             <i class="fa-solid fa-bullseye text-lg"></i>
                         </div>
-                        <h3 class="font-bold text-slate-900 text-sm mb-1">رؤيتنا الاستراتيجية</h3>
-                        <p class="text-xs text-slate-500">الريادة في تمكين ورعاية الأرامل وتحقيق استقرارهم المعيشي والاجتماعي.</p>
+
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">
+                            رؤيتنا الاستراتيجية
+                        </h3>
+
+                        <p class="text-xs text-slate-500">
+                            الريادة في تمكين ورعاية الأرامل وتحقيق استقرارهم المعيشي والاجتماعي.
+                        </p>
+
                     </div>
+
                     <div class="glass-card p-5 rounded-2xl border border-slate-100 shadow-sm">
+
                         <div class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-3">
                             <i class="fa-solid fa-eye text-lg"></i>
                         </div>
-                        <h3 class="font-bold text-slate-900 text-sm mb-1">رسالتنا الإنسانية</h3>
-                        <p class="text-xs text-slate-500">تقديم خدمات إنسانية وتنموية متكاملة بكفاءة عالية واحترافية مطلقة.</p>
+
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">
+                            رسالتنا الإنسانية
+                        </h3>
+
+                        <p class="text-xs text-slate-500">
+                            تقديم خدمات إنسانية وتنموية متكاملة بكفاءة عالية واحترافية مطلقة.
+                        </p>
+
                     </div>
+
                 </div>
             </div>
+
             <div class="relative">
+
                 <div class="glass-card p-3 rounded-3xl shadow-2xl border border-white">
-                    <img src="https://placehold.co/600x450/0f766e/ffffff?text=Al-Bukayriyah+Community" alt="جمعية الساعي بالبكيرية" class="w-full h-full object-cover rounded-2xl">
+
+                    <img src="https://placehold.co/600x450/0f766e/ffffff?text=Al-Bukayriyah+Community"
+                         alt="جمعية الساعي بالبكيرية"
+                         class="w-full h-full object-cover rounded-2xl">
+
                 </div>
+
                 <div class="absolute -bottom-6 -right-6 bg-amber-500 text-slate-950 p-5 rounded-2xl shadow-xl max-w-xs hidden sm:block border-2 border-white font-bold text-xs">
-                    <p>"الساعي على الأرملة كالمجاهد في سبيل الله أو القائم الليل الصائم النهار"</p>
-                    <span class="text-[10px] mt-1 block opacity-85">- حديث شريف</span>
+
+                    <p>
+                        "الساعي على الأرملة كالمجاهد في سبيل الله أو القائم الليل الصائم النهار"
+                    </p>
+
+                    <span class="text-[10px] mt-1 block opacity-85">
+                        - حديث شريف
+                    </span>
+
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section id="services" class="py-20 bg-slate-100/60 backdrop-blur-md relative border-y border-slate-200/50">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-100">خدماتنا وبرامجنا</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-4 mb-4">خدمات متكاملة تصنع الفارق</h2>
-                <p class="text-slate-600 text-sm sm:text-base">حزمة من البرامج الاجتماعية والتنموية المصممة بعناية لتلبية احتياجات الأسر بكل كرامة وسرية.</p>
+
+                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-100">
+                    خدماتنا وبرامجنا
+                </span>
+
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-4 mb-4">
+                    خدمات متكاملة تصنع الفارق
+                </h2>
+
+                <p class="text-slate-600 text-sm sm:text-base">
+                    حزمة من البرامج الاجتماعية والتنموية المصممة بعناية لتلبية احتياجات الأسر بكل كرامة وسرية.
+                </p>
+
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
+
                 <div class="glass-card rounded-3xl p-8 shadow-lg hover:shadow-2xl transition duration-300 group border border-white/80">
+
                     <div class="w-14 h-14 rounded-2xl bg-teal-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-teal-700 transition">
                         <i class="fa-solid fa-hand-holding-dollar"></i>
                     </div>
-                    <h3 class="text-xl font-black text-slate-900 mb-3">الدعم المالي والمعيشي</h3>
+
+                    <h3 class="text-xl font-black text-slate-900 mb-3">
+                        الدعم المالي والمعيشي
+                    </h3>
+
                     <p class="text-slate-600 text-sm leading-relaxed mb-6">
                         صرف إعانات نقدية شهرية وموسمية تغطي المتطلبات الأساسية المعيشية وتوفر الاستقرار المالي للأسر المستفيدة.
                     </p>
-                    <a href="#donate" class="text-teal-700 font-bold text-sm flex items-center gap-2 hover:gap-3 transition">
+
+                    <a href="#donate"
+                       class="text-teal-700 font-bold text-sm flex items-center gap-2 hover:gap-3 transition">
                         <span>دعم هذا البرنامج</span>
                         <i class="fa-solid fa-arrow-left"></i>
                     </a>
+
                 </div>
 
-                <!-- Service 2 -->
                 <div class="glass-card rounded-3xl p-8 shadow-lg hover:shadow-2xl transition duration-300 group border border-white/80">
+
                     <div class="w-14 h-14 rounded-2xl bg-cyan-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-cyan-700 transition">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="text-xl font-black text-slate-900 mb-3">التعليم والتأهيل المهني</h3>
+
+                    <h3 class="text-xl font-black text-slate-900 mb-3">
+                        التعليم والتأهيل المهني
+                    </h3>
+
                     <p class="text-slate-600 text-sm leading-relaxed mb-6">
                         توفير المنح الدراسية للأبناء، ودورات تدريبية متخصصة للأمهات لتمكينهن من دخول سوق العمل والاعتماد على الذات.
                     </p>
-                    <a href="#donate" class="text-cyan-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition">
+
+                    <a href="#donate"
+                       class="text-cyan-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition">
                         <span>دعم هذا البرنامج</span>
                         <i class="fa-solid fa-arrow-left"></i>
                     </a>
+
                 </div>
 
-                <!-- Service 3 -->
                 <div class="glass-card rounded-3xl p-8 shadow-lg hover:shadow-2xl transition duration-300 group border border-white/80">
+
                     <div class="w-14 h-14 rounded-2xl bg-amber-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-amber-700 transition">
                         <i class="fa-solid fa-house-chimney-medical"></i>
                     </div>
-                    <h3 class="text-xl font-black text-slate-900 mb-3">الرعاية السكنية والصحية</h3>
+
+                    <h3 class="text-xl font-black text-slate-900 mb-3">
+                        الرعاية السكنية والصحية
+                    </h3>
+
                     <p class="text-slate-600 text-sm leading-relaxed mb-6">
                         المساهمة في سداد الإيجارات، وترميم المنازل، وتوفير التغطيات والتأمين الصحي والأدوية للأسر المحتاجة.
                     </p>
-                    <a href="#donate" class="text-amber-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition">
+
+                    <a href="#donate"
+                       class="text-amber-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition">
                         <span>دعم هذا البرنامج</span>
                         <i class="fa-solid fa-arrow-left"></i>
                     </a>
+
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Beneficiary Request Form -->
+    <!-- Beneficiary -->
     <section id="beneficiary" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+
         <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl border border-teal-100">
+
             <div class="text-center max-w-xl mx-auto mb-10">
-                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200">بوابة المستفيدين</span>
-                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-3 mb-2">تقديم طلب خدمة أو مساعدة</h2>
-                <p class="text-slate-600 text-sm">تعبئة نموذج الطلب تضمن السرية التامة ودراسة الحالة بأقصى سرعة وفق اللوائح المعتمدة.</p>
+
+                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200">
+                    بوابة المستفيدين
+                </span>
+
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-3 mb-2">
+                    تقديم طلب خدمة أو مساعدة
+                </h2>
+
+                <p class="text-slate-600 text-sm">
+                    تعبئة نموذج الطلب تضمن السرية التامة ودراسة الحالة بأقصى سرعة وفق اللوائح المعتمدة.
+                </p>
+
             </div>
 
             <form id="beneficiaryForm" onsubmit="handleBeneficiarySubmit(event)" class="space-y-6">
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">الاسم الثلاثي:</label>
-                        <input type="text" required class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm" placeholder="الاسم الكريم">
+
+                        <label class="block text-sm font-bold text-slate-700 mb-2">
+                            الاسم الثلاثي:
+                        </label>
+
+                        <input type="text"
+                               required
+                               class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm"
+                               placeholder="الاسم الكريم">
+
                     </div>
+
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">رقم الجوال (للتواصل):</label>
-                        <input type="tel" required class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm" placeholder="05xxxxxxxx">
+
+                        <label class="block text-sm font-bold text-slate-700 mb-2">
+                            رقم الجوال (للتواصل):
+                        </label>
+
+                        <input type="tel"
+                               required
+                               class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm"
+                               placeholder="05xxxxxxxx">
+
                     </div>
+
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">نوع الخدمة المطلوبة:</label>
+
+                        <label class="block text-sm font-bold text-slate-700 mb-2">
+                            نوع الخدمة المطلوبة:
+                        </label>
+
                         <select class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm">
+
                             <option>إعانة مالية شهرية</option>
                             <option>كفالة أيتام</option>
                             <option>مساعدة سكنية (إيجار / ترميم)</option>
                             <option>دعم تعليمي وتدريب مهني</option>
                             <option>سلة غذائية عينية</option>
+
                         </select>
+
                     </div>
+
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">عدد أفراد الأسرة:</label>
-                        <input type="number" min="1" value="1" required class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm">
+
+                        <label class="block text-sm font-bold text-slate-700 mb-2">
+                            عدد أفراد الأسرة:
+                        </label>
+
+                        <input type="number"
+                               min="1"
+                               value="1"
+                               required
+                               class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm">
+
                     </div>
+
                 </div>
 
                 <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">تفاصيل الحالة والاحتياج:</label>
-                    <textarea rows="4" required class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm" placeholder="اكتب نبذة مختصرة عن الحالة لتسهيل دراستها وسرعة خدمتها..."></textarea>
+
+                    <label class="block text-sm font-bold text-slate-700 mb-2">
+                        تفاصيل الحالة والاحتياج:
+                    </label>
+
+                    <textarea rows="4"
+                              required
+                              class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm"
+                              placeholder="اكتب نبذة مختصرة عن الحالة لتسهيل دراستها وسرعة خدمتها..."></textarea>
+
                 </div>
 
-                <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-4 rounded-2xl transition shadow-lg text-base flex items-center justify-center gap-2">
+                <button type="submit"
+                        class="w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-4 rounded-2xl transition shadow-lg text-base flex items-center justify-center gap-2">
+
                     <i class="fa-solid fa-paper-plane"></i>
                     <span>إرسال الطلب بسرية تامة</span>
+
                 </button>
+
             </form>
         </div>
     </section>
 
-    <!-- Donation Section -->
+    <!-- Donation -->
     <section id="donate" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0f766e_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-400 font-bold text-xs uppercase bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/20">باب الخير مفتوح</span>
-                <h2 class="text-3xl sm:text-4xl font-black mt-4 mb-4">كن شريكاً في الأجر والدعم</h2>
-                <p class="text-slate-300 text-sm sm:text-base">اختر سهمك الخيري وساهم معنا في تفريج كربة الأرامل وأسرهم في محافظة البكيرية.</p>
+
+                <span class="text-amber-400 font-bold text-xs uppercase bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/20">
+                    باب الخير مفتوح
+                </span>
+
+                <h2 class="text-3xl sm:text-4xl font-black mt-4 mb-4">
+                    كن شريكاً في الأجر والدعم
+                </h2>
+
+                <p class="text-slate-300 text-sm sm:text-base">
+                    اختر سهمك الخيري وساهم معنا في تفريج كربة الأرامل وأسرهم في محافظة البكيرية.
+                </p>
+
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
                 <div class="bg-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-slate-700 flex flex-col justify-between shadow-xl">
+
                     <div>
-                        <span class="bg-teal-500/20 text-teal-300 text-xs font-bold px-3 py-1 rounded-full">سهم عام</span>
-                        <h3 class="text-3xl font-black mt-4 mb-2">100 ر.س</h3>
-                        <p class="text-slate-400 text-sm mb-6">يساهم في توفير سلة غذائية أساسية لأسرة متعففة لشهر كامل.</p>
+
+                        <span class="bg-teal-500/20 text-teal-300 text-xs font-bold px-3 py-1 rounded-full">
+                            سهم عام
+                        </span>
+
+                        <h3 class="text-3xl font-black mt-4 mb-2">
+                            100 ر.س
+                        </h3>
+
+                        <p class="text-slate-400 text-sm mb-6">
+                            يساهم في توفير سلة غذائية أساسية لأسرة متعففة لشهر كامل.
+                        </p>
+
                     </div>
-                    <button onclick="alertDonation(100)" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-2xl transition shadow-lg">تبرع بـ 100 ر.س</button>
+
+                    <button onclick="alertDonation(100)"
+                            class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-2xl transition shadow-lg">
+                        تبرع بـ 100 ر.س
+                    </button>
+
                 </div>
 
                 <div class="bg-slate-800/90 backdrop-blur-xl rounded-3xl p-8 border-2 border-teal-500 flex flex-col justify-between relative shadow-2xl transform md:-translate-y-2">
-                    <div class="absolute -top-3.5 right-8 bg-teal-500 text-slate-950 text-xs font-black px-4 py-1 rounded-full shadow-md">الأكثر إقبالاً</div>
-                    <div>
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">سهم الرعاية</span>
-                        <h3 class="text-3xl font-black mt-4 mb-2">500 ر.س</h3>
-                        <p class="text-slate-400 text-sm mb-6">يغطي جزءاً من الإيجار أو الرسوم الدراسية لأبناء الأرامل.</p>
+
+                    <div class="absolute -top-3.5 right-8 bg-teal-500 text-slate-950 text-xs font-black px-4 py-1 rounded-full shadow-md">
+                        الأكثر إقبالاً
                     </div>
-                    <button onclick="alertDonation(500)" class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-black py-3.5 rounded-2xl transition shadow-xl">تبرع بـ 500 ر.س</button>
+
+                    <div>
+
+                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">
+                            سهم الرعاية
+                        </span>
+
+                        <h3 class="text-3xl font-black mt-4 mb-2">
+                            500 ر.س
+                        </h3>
+
+                        <p class="text-slate-400 text-sm mb-6">
+                            يغطي جزءاً من الإيجار أو الرسوم الدراسية لأبناء الأرامل.
+                        </p>
+
+                    </div>
+
+                    <button onclick="alertDonation(500)"
+                            class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-black py-3.5 rounded-2xl transition shadow-xl">
+                        تبرع بـ 500 ر.س
+                    </button>
+
                 </div>
 
                 <div class="bg-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-slate-700 flex flex-col justify-between shadow-xl">
+
                     <div>
-                        <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-3 py-1 rounded-full">كفالة كاملة</span>
-                        <h3 class="text-3xl font-black mt-4 mb-2">1,000 ر.س</h3>
-                        <p class="text-slate-400 text-sm mb-6">كفالة شاملة لأسرة أرملة لمدة شهر كامل مع البرامج التنموية.</p>
+
+                        <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-3 py-1 rounded-full">
+                            كفالة كاملة
+                        </span>
+
+                        <h3 class="text-3xl font-black mt-4 mb-2">
+                            1,000 ر.س
+                        </h3>
+
+                        <p class="text-slate-400 text-sm mb-6">
+                            كفالة شاملة لأسرة أرملة لمدة شهر كامل مع البرامج التنموية.
+                        </p>
+
                     </div>
-                    <button onclick="alertDonation(1000)" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3.5 rounded-2xl transition shadow-lg">تبرع بـ 1,000 ر.س</button>
+
+                    <button onclick="alertDonation(1000)"
+                            class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3.5 rounded-2xl transition shadow-lg">
+                        تبرع بـ 1,000 ر.س
+                    </button>
+
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-100">الاستفسارات</span>
-            <h2 class="text-3xl font-black text-slate-900 mt-4 mb-3">الأسئلة الشائعة</h2>
-            <p class="text-slate-600 text-sm">كل ما ترغب بمعرفته حول أعمال الجمعية، قنوات التبرع، وآلية التسجيل.</p>
+
+            <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-100">
+                الاستفسارات
+            </span>
+
+            <h2 class="text-3xl font-black text-slate-900 mt-4 mb-3">
+                الأسئلة الشائعة
+            </h2>
+
+            <p class="text-slate-600 text-sm">
+                كل ما ترغب بمعرفته حول أعمال الجمعية، قنوات التبرع، وآلية التسجيل.
+            </p>
+
         </div>
 
         <div class="space-y-4">
+
             <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 transition">
-                <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-right font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+
+                <button onclick="toggleFaq(1)"
+                        class="w-full px-6 py-5 text-right font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+
                     <span>هل الجمعية مرخصة رسمياً ومن أين تشرف؟</span>
-                    <i class="fa-solid fa-chevron-down text-teal-600 transition-transform duration-300" id="faqIcon1"></i>
+
+                    <i class="fa-solid fa-chevron-down text-teal-600 transition-transform duration-300"
+                       id="faqIcon1"></i>
+
                 </button>
-                <div id="faqContent1" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+
+                <div id="faqContent1"
+                     class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+
                     نعم، جمعية "الساعي على الأرملة" بمحافظة البكيرية مسجلة رسمياً لدى وزارة الموارد البشرية والتنمية الاجتماعية برخصة معتمدة، وتخضع لأنظمة الحوكمة والرقابة المالية.
+
                 </div>
+
             </div>
 
             <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 transition">
-                <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-right font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+
+                <button onclick="toggleFaq(2)"
+                        class="w-full px-6 py-5 text-right font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+
                     <span>كيف يمكنني كفالة أسرة أو متابعة أثري الخيري؟</span>
-                    <i class="fa-solid fa-chevron-down text-teal-600 transition-transform duration-300" id="faqIcon2"></i>
+
+                    <i class="fa-solid fa-chevron-down text-teal-600 transition-transform duration-300"
+                       id="faqIcon2"></i>
+
                 </button>
-                <div id="faqContent2" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+
+                <div id="faqContent2"
+                     class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+
                     يمكنك اختيار باقة الكفالة أو التبرع من خلال بوابات التبرع المعتمدة، وسيقوم فريق خدمة المتبرع بتزويدك بالتقارير الدورية لطبيعة الأثر المقدم للأسر بكل شفافية.
+
                 </div>
+
             </div>
 
             <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 transition">
-                <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-right font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+
+                <button onclick="toggleFaq(3)"
+                        class="w-full px-6 py-5 text-right font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+
                     <span>ما هي الشروط الأساسية لتسجيل الأرامل المستفيدات؟</span>
-                    <i class="fa-solid fa-chevron-down text-teal-600 transition-transform duration-300" id="faqIcon3"></i>
+
+                    <i class="fa-solid fa-chevron-down text-teal-600 transition-transform duration-300"
+                       id="faqIcon3"></i>
+
                 </button>
-                <div id="faqContent3" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+
+                <div id="faqContent3"
+                     class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+
                     أن تكون المستفيدة مقيمة في محافظة البكيرية أو المراكز التابعة لها، وتقديم المستندات الرسمية الثبوتية، ويتم دراسة الحالة عبر الباحثة الاجتماعية للجمعية.
+
                 </div>
+
             </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900">
+    <footer id="contact"
+            class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
                 <div>
+
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
+
                         <div class="w-10 h-10 bg-white/10 rounded-2xl flex items-center justify-center p-1 overflow-hidden border border-white/20">
-                            <img src="شعار الجمعية.png" alt="الشعار" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/150x150/0f766e/ffffff?text=الساعي'">
+
+                            <img src="logo.png"
+                                 alt="الشعار"
+                                 class="w-full h-full object-contain"
+                                 onerror="this.src='https://placehold.co/150x150/0f766e/ffffff?text=الساعي'">
+
                         </div>
-                        <h3 class="font-bold text-white text-base">جمعية الساعي بالبكيرية</h3>
+
+                        <h3 class="font-bold text-white text-base">
+                            جمعية الساعي بالبكيرية
+                        </h3>
+
                     </div>
+
                     <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6">
                         نسعى لتقديم العمل الخيري بأعلى معايير الحوكمة والشفافية لخدمة الأرامل وأسرهن بمحافظة البكيرية ومنطقة القصيم.
                     </p>
+
                     <div class="flex space-x-3 space-x-reverse">
-                        <a href="#" class="w-10 h-10 rounded-2xl bg-slate-900 hover:bg-teal-600 hover:text-white flex items-center justify-center transition border border-slate-800"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-2xl bg-slate-900 hover:bg-teal-600 hover:text-white flex items-center justify-center transition border border-slate-800"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-2xl bg-slate-900 hover:bg-teal-600 hover:text-white flex items-center justify-center transition border border-slate-800"><i class="fa-brands fa-whatsapp"></i></a>
+
+                        <a href="#"
+                           class="w-10 h-10 rounded-2xl bg-slate-900 hover:bg-teal-600 hover:text-white flex items-center justify-center transition border border-slate-800">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="#"
+                           class="w-10 h-10 rounded-2xl bg-slate-900 hover:bg-teal-600 hover:text-white flex items-center justify-center transition border border-slate-800">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#"
+                           class="w-10 h-10 rounded-2xl bg-slate-900 hover:bg-teal-600 hover:text-white flex items-center justify-center transition border border-slate-800">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
                     </div>
+
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-white text-base mb-4">روابط سريعة</h4>
+
+                    <h4 class="font-bold text-white text-base mb-4">
+                        روابط سريعة
+                    </h4>
+
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="#about" class="hover:text-teal-400 transition">عن الجمعية</a></li>
-                        <li><a href="#services" class="hover:text-teal-400 transition">الخدمات والمشاريع</a></li>
-                        <li><a href="#calculator" class="hover:text-teal-400 transition">حاسبة التبرع</a></li>
-                        <li><a href="#beneficiary" class="hover:text-teal-400 transition">طلب مساعدة</a></li>
+
+                        <li>
+                            <a href="#about" class="hover:text-teal-400 transition">
+                                عن الجمعية
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services" class="hover:text-teal-400 transition">
+                                الخدمات والمشاريع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#calculator" class="hover:text-teal-400 transition">
+                                حاسبة التبرع
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#beneficiary" class="hover:text-teal-400 transition">
+                                طلب مساعدة
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-white text-base mb-4">تواصل معنا</h4>
+
+                    <h4 class="font-bold text-white text-base mb-4">
+                        تواصل معنا
+                    </h4>
+
                     <ul class="space-y-3 text-sm">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-teal-500"></i><span>محافظة البكيرية، القصيم، السعودية</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-teal-500"></i><span>+966 16 XXX XXXX</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-teal-500"></i><span>info@alsai-bukayriyah.org</span></li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-teal-500"></i>
+                            <span>محافظة البكيرية، القصيم، السعودية</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-teal-500"></i>
+                            <span>+966 16 XXX XXXX</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-teal-500"></i>
+                            <span>info@alsai-bukayriyah.org</span>
+                        </li>
+
                     </ul>
+
                 </div>
+
+            </div>
+
+            <!-- الشعار الكبير الجديد -->
+            <div class="flex justify-center mb-10">
+
+                <div class="w-40 h-40 sm:w-52 sm:h-52 bg-white rounded-[2rem] flex items-center justify-center p-4 shadow-2xl border border-white/20 overflow-hidden">
+
+                    <img src="logo.png"
+                         alt="شعار جمعية الساعي على الأرملة بمحافظة البكيرية"
+                         class="w-full h-full object-contain">
+
+                </div>
+
             </div>
 
             <div class="border-t border-slate-900 pt-8 text-center text-xs text-slate-500">
-                <p>جميع الحقوق محفوظة © 2026 جمعية الساعي على الأرملة بمحافظة البكيرية.</p>
+
+                <p>
+                    جميع الحقوق محفوظة © 2026 جمعية الساعي على الأرملة بمحافظة البكيرية.
+                </p>
+
             </div>
+
         </div>
     </footer>
 
-    <!-- JavaScript Interactive Code -->
+    <!-- JavaScript -->
     <script>
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
@@ -536,35 +1033,71 @@
         let currentAmount = 500;
 
         function setCalcType(type) {
+
             currentType = type;
-            document.getElementById('btnZakat').className = type === 'zakat' ? 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md' : 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500';
-            document.getElementById('btnSadaqah').className = type === 'sadaqah' ? 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md' : 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500';
-            document.getElementById('btnKefalah').className = type === 'kefalah' ? 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md' : 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500';
+
+            document.getElementById('btnZakat').className =
+                type === 'zakat'
+                ? 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md'
+                : 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500';
+
+            document.getElementById('btnSadaqah').className =
+                type === 'sadaqah'
+                ? 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md'
+                : 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500';
+
+            document.getElementById('btnKefalah').className =
+                type === 'kefalah'
+                ? 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md'
+                : 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500';
+
             updateCalculator(currentAmount);
         }
 
         function quickAmount(val) {
+
             document.getElementById('amountRange').value = val;
             updateCalculator(val);
+
         }
 
         function updateCalculator(val) {
+
             currentAmount = val;
-            document.getElementById('amountDisplay').innerText = val + ' ر.س';
-            document.getElementById('donateBtnText').innerText = 'تبرع بـ ' + val + ' ر.س الآن';
-            
+
+            document.getElementById('amountDisplay').innerText =
+                val + ' ر.س';
+
+            document.getElementById('donateBtnText').innerText =
+                'تبرع بـ ' + val + ' ر.س الآن';
+
             const titleElem = document.getElementById('impactTitle');
             const descElem = document.getElementById('impactDesc');
 
             if (currentType === 'zakat') {
-                titleElem.innerText = 'تطهير ونماء لمالك (' + val + ' ر.س)';
-                descElem.innerText = 'زكاتك تصل مباشرة لمستحقيها من الأرامل والأسر المحتاجة بالبكيرية لتوفير احتياجاتهم الأساسية بكل طمأنينة.';
+
+                titleElem.innerText =
+                    'تطهير ونماء لمالك (' + val + ' ر.س)';
+
+                descElem.innerText =
+                    'زكاتك تصل مباشرة لمستحقيها من الأرامل والأسر المحتاجة بالبكيرية لتوفير احتياجاتهم الأساسية بكل طمأنينة.';
+
             } else if (currentType === 'sadaqah') {
-                titleElem.innerText = 'صدقة جارية وخير بركة (' + val + ' ر.س)';
-                descElem.innerText = 'تساهم في المشاريع التنموية والغذائية المستدامة التي تسند عائلات الأيتام والأرامل بمحافظة البكيرية.';
+
+                titleElem.innerText =
+                    'صدقة جارية وخير بركة (' + val + ' ر.س)';
+
+                descElem.innerText =
+                    'تساهم في المشاريع التنموية والغذائية المستدامة التي تسند عائلات الأيتام والأرامل بمحافظة البكيرية.';
+
             } else {
-                titleElem.innerText = 'كفالة رعاية متكاملة (' + val + ' ر.س)';
-                descElem.innerText = 'هذا المبلغ يدعم استقرار أسرة كاملة وتوفير جزء كبير من متطلبات المعيشة والتعليم والكسوة.';
+
+                titleElem.innerText =
+                    'كفالة رعاية متكاملة (' + val + ' ر.س)';
+
+                descElem.innerText =
+                    'هذا المبلغ يدعم استقرار أسرة كاملة وتوفير جزء كبير من متطلبات المعيشة والتعليم والكسوة.';
+
             }
         }
 
@@ -573,63 +1106,149 @@
         }
 
         function alertDonation(amount) {
+
             const modal = document.createElement('div');
+
             modal.innerHTML = `
+
                 <div style="position: fixed; inset: 0; background: rgba(15, 23, 42, 0.75); display: flex; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(12px);">
+
                     <div style="background: rgba(255, 255, 255, 0.95); padding: 32px; border-radius: 24px; max-width: 420px; width: 90%; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border: 1px solid rgba(255,255,255,0.8);">
+
                         <div style="width: 64px; height: 64px; background: #ecfdf5; color: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 16px; box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.2);">
                             <i class="fa-solid fa-heart"></i>
                         </div>
-                        <h3 style="font-size: 20px; font-weight: 900; color: #0f172a; margin-bottom: 8px;">شكراً لكرمك وفضلك!</h3>
-                        <p style="font-size: 14px; color: #475569; margin-bottom: 20px; line-height: 1.6;">لقد اخترت المساهمة بمبلغ <strong style="color: #0d9488;">${amount} ريال سعودي</strong>. يمكنك إتمام التبرع السريع أو التحويل عبر حسابات الجمعية المعتمدة.</p>
+
+                        <h3 style="font-size: 20px; font-weight: 900; color: #0f172a; margin-bottom: 8px;">
+                            شكراً لكرمك وفضلك!
+                        </h3>
+
+                        <p style="font-size: 14px; color: #475569; margin-bottom: 20px; line-height: 1.6;">
+                            لقد اخترت المساهمة بمبلغ
+                            <strong style="color: #0d9488;">
+                                ${amount} ريال سعودي
+                            </strong>.
+                            يمكنك إتمام التبرع السريع أو التحويل عبر حسابات الجمعية المعتمدة.
+                        </p>
+
                         <div style="background: #f8fafc; padding: 12px; border-radius: 12px; margin-bottom: 20px; font-size: 13px; color: #334155; text-align: right; border: 1px solid #e2e8f0;">
-                            <div><strong>رقم الآيبان الرسمي:</strong> SA10 8000 0...</div>
-                            <div><strong>مصرف الراجحي</strong></div>
+
+                            <div>
+                                <strong>رقم الآيبان الرسمي:</strong>
+                                SA10 8000 0...
+                            </div>
+
+                            <div>
+                                <strong>مصرف الراجحي</strong>
+                            </div>
+
                         </div>
+
                         <div style="display: flex; gap: 10px;">
-                            <button id="closeModalBtn" style="background: #0f766e; color: white; border: none; padding: 12px; border-radius: 16px; font-weight: bold; cursor: pointer; flex: 1; box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.3);">تأكيد وحفظ الإيصال</button>
-                            <button id="cancelModalBtn" style="background: #e2e8f0; color: #334155; border: none; padding: 12px 16px; border-radius: 16px; font-weight: bold; cursor: pointer;">إلغاء</button>
+
+                            <button id="closeModalBtn"
+                                    style="background: #0f766e; color: white; border: none; padding: 12px; border-radius: 16px; font-weight: bold; cursor: pointer; flex: 1; box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.3);">
+                                تأكيد وحفظ الإيصال
+                            </button>
+
+                            <button id="cancelModalBtn"
+                                    style="background: #e2e8f0; color: #334155; border: none; padding: 12px 16px; border-radius: 16px; font-weight: bold; cursor: pointer;">
+                                إلغاء
+                            </button>
+
                         </div>
+
                     </div>
+
                 </div>
+
             `;
+
             document.body.appendChild(modal);
+
             document.getElementById('closeModalBtn').onclick = () => {
+
                 alert('تم تسجيل رغبتك بالتبرع بنجاح. جاري تحويلك لبوابة الدفع الآمنة...');
+
                 modal.remove();
+
             };
-            document.getElementById('cancelModalBtn').onclick = () => modal.remove();
-            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+
+            document.getElementById('cancelModalBtn').onclick = () =>
+                modal.remove();
+
+            modal.onclick = (e) => {
+
+                if (e.target === modal)
+                    modal.remove();
+
+            };
         }
 
         function handleBeneficiarySubmit(e) {
+
             e.preventDefault();
+
             const successBox = document.createElement('div');
+
             successBox.innerHTML = `
+
                 <div style="position: fixed; inset: 0; background: rgba(15, 23, 42, 0.75); display: flex; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(12px);">
+
                     <div style="background: rgba(255, 255, 255, 0.95); padding: 32px; border-radius: 24px; max-width: 400px; width: 90%; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+
                         <div style="width: 64px; height: 64px; background: #ecfdf5; color: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 16px;">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                        <h3 style="font-size: 20px; font-weight: 900; color: #0f172a; margin-bottom: 8px;">تم إرسال طلبك بنجاح!</h3>
-                        <p style="font-size: 14px; color: #475569; margin-bottom: 24px; line-height: 1.6;">تم حفظ طلبك في النظام بسرية تامة، وسيتواصل معك فريق البحث الاجتماعي بالجمعية قريباً.</p>
-                        <button id="closeSuccessBtn" style="background: #0f766e; color: white; border: none; padding: 12px 24px; border-radius: 16px; font-weight: bold; cursor: pointer; width: 100%;">تم، شكراً لكم</button>
+
+                        <h3 style="font-size: 20px; font-weight: 900; color: #0f172a; margin-bottom: 8px;">
+                            تم إرسال طلبك بنجاح!
+                        </h3>
+
+                        <p style="font-size: 14px; color: #475569; margin-bottom: 24px; line-height: 1.6;">
+                            تم حفظ طلبك في النظام بسرية تامة، وسيتواصل معك فريق البحث الاجتماعي بالجمعية قريباً.
+                        </p>
+
+                        <button id="closeSuccessBtn"
+                                style="background: #0f766e; color: white; border: none; padding: 12px 24px; border-radius: 16px; font-weight: bold; cursor: pointer; width: 100%;">
+                            تم، شكراً لكم
+                        </button>
+
                     </div>
+
                 </div>
+
             `;
+
             document.body.appendChild(successBox);
+
             document.getElementById('closeSuccessBtn').onclick = () => {
+
                 successBox.remove();
+
                 document.getElementById('beneficiaryForm').reset();
+
             };
         }
 
         function toggleFaq(id) {
-            const content = document.getElementById('faqContent' + id);
-            const icon = document.getElementById('faqIcon' + id);
+
+            const content =
+                document.getElementById('faqContent' + id);
+
+            const icon =
+                document.getElementById('faqIcon' + id);
+
             content.classList.toggle('hidden');
-            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+
+            icon.style.transform =
+                content.classList.contains('hidden')
+                ? 'rotate(0deg)'
+                : 'rotate(180deg)';
+
         }
+
     </script>
+
 </body>
 </html>
