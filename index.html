@@ -1,1832 +1,635 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>جمعية الساعي على الأرملة | البكيرية</title>
-
-    <meta name="description"
-          content="جمعية الساعي على الأرملة بمحافظة البكيرية، نسعى إلى رعاية الأرامل وتمكينهن وتحقيق أثر مستدام.">
-
+    <title>جمعية الساعي على الأرملة بمحافظة البكيرية | الموقع الرسمي التفاعلي</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0B2523',
+                        brandTeal: '#0F766E',
+                        brandCyan: '#0284C7',
+                        brandGold: '#D97706',
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif']
+                    },
+                    boxShadow: {
+                        glass: '0 8px 32px 0 rgba(15, 118, 110, 0.15)',
+                        glassHover: '0 12px 40px 0 rgba(15, 118, 110, 0.3)',
+                        neon: '0 0 35px rgba(15, 118, 110, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-
-        :root {
-            --primary: #176b57;
-            --primary-dark: #0d4f40;
-            --primary-light: #eaf5f1;
-            --gold: #c7a35a;
-            --dark: #17332c;
-            --text: #60706b;
-            --light: #f7faf9;
-            --white: #ffffff;
-            --border: #e8efec;
-            --shadow: 0 15px 45px rgba(23, 51, 44, 0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: Tahoma, Arial, sans-serif;
-            background: var(--white);
-            color: var(--dark);
-            line-height: 1.8;
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f0fdfa 0%, #f8fafc 50%, #f1f5f9 100%);
+            color: #1e293b;
+            overflow-x: hidden;
         }
-
-        a {
-            text-decoration: none;
-            color: inherit;
+        /* Ultra Glassmorphism Effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(15, 118, 110, 0.1);
         }
-
-        button {
-            font-family: inherit;
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.88);
+            box-shadow: 0 12px 40px 0 rgba(15, 118, 110, 0.2);
         }
-
-        .container {
-            width: min(1180px, 92%);
-            margin: auto;
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
         }
-
-        /* =========================
-           Header
-        ========================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.94);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+        .glass-hero {
+            background: linear-gradient(135deg, rgba(11, 37, 35, 0.95), rgba(15, 118, 110, 0.90)), url('https://placehold.co/1920x1080/0f766e/ffffff?text=Al-Bukayriyah+Charity') center/cover fixed no-repeat;
         }
-
-        .navbar {
-            height: 82px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand-logo {
-            width: 52px;
-            height: 52px;
-            border-radius: 15px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-            font-weight: bold;
-            box-shadow: 0 8px 20px rgba(23,107,87,0.2);
-        }
-
-        .brand-text strong {
-            display: block;
-            color: var(--dark);
-            font-size: 16px;
-        }
-
-        .brand-text span {
-            display: block;
-            color: #89958f;
-            font-size: 11px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 27px;
-        }
-
-        nav a {
-            font-size: 13px;
-            color: #55655f;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        .nav-button {
-            background: var(--primary);
-            color: white;
-            padding: 11px 20px;
-            border-radius: 9px;
-        }
-
-        .nav-button:hover {
-            color: white;
-            background: var(--primary-dark);
-        }
-
-        .menu-btn {
-            display: none;
-            border: 0;
-            background: var(--primary-light);
-            color: var(--primary);
-            width: 45px;
-            height: 45px;
-            border-radius: 10px;
-            font-size: 21px;
-            cursor: pointer;
-        }
-
-        /* =========================
-           Hero
-        ========================= */
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            min-height: 650px;
-            background:
-                radial-gradient(circle at 15% 20%, rgba(199,163,90,0.13), transparent 25%),
-                radial-gradient(circle at 90% 80%, rgba(23,107,87,0.13), transparent 30%),
-                linear-gradient(135deg, #f4faf7, #ffffff);
-        }
-
-        .hero::before {
-            content: "";
+        .blob-bg {
             position: absolute;
             width: 450px;
             height: 450px;
+            background: radial-gradient(circle, rgba(15,118,110,0.2) 0%, rgba(2,132,199,0.05) 70%);
             border-radius: 50%;
-            border: 1px solid rgba(23,107,87,0.08);
-            left: -180px;
-            top: 90px;
+            filter: blur(60px);
+            z-index: -1;
+            animation: floatBlob 10s ease-in-out infinite alternate;
         }
-
-        .hero-content {
-            min-height: 650px;
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            align-items: center;
-            gap: 70px;
+        @keyframes floatBlob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            100% { transform: translate(30px, -40px) scale(1.1); }
         }
-
-        .hero-text {
-            position: relative;
-            z-index: 2;
+        ::-webkit-scrollbar {
+            width: 10px;
         }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--primary-light);
-            color: var(--primary);
-            padding: 8px 15px;
-            border-radius: 50px;
-            font-size: 12px;
-            margin-bottom: 20px;
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
         }
-
-        .eyebrow::before {
-            content: "";
-            width: 7px;
-            height: 7px;
-            background: var(--gold);
-            border-radius: 50%;
+        ::-webkit-scrollbar-thumb {
+            background: #0f766e;
+            border-radius: 5px;
         }
-
-        .hero h1 {
-            font-size: clamp(38px, 5vw, 64px);
-            line-height: 1.25;
-            letter-spacing: -1px;
-            margin-bottom: 22px;
-            color: var(--dark);
-        }
-
-        .hero h1 span {
-            color: var(--primary);
-        }
-
-        .hero-description {
-            color: var(--text);
-            font-size: 17px;
-            max-width: 650px;
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 13px 25px;
-            border-radius: 10px;
-            font-size: 13px;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            color: white;
-            background: var(--primary);
-            box-shadow: 0 10px 25px rgba(23,107,87,0.18);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            color: var(--primary);
-            background: white;
-            border: 1px solid #dce9e4;
-        }
-
-        .btn-outline:hover {
-            border-color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        .hero-visual {
-            position: relative;
-            height: 460px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .visual-main {
-            width: 340px;
-            height: 380px;
-            border-radius: 35px;
-            background: linear-gradient(145deg, var(--primary), var(--primary-dark));
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 30px 70px rgba(23,107,87,0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .visual-main::before,
-        .visual-main::after {
-            content: "";
-            position: absolute;
-            border: 1px solid rgba(255,255,255,0.14);
-            border-radius: 50%;
-        }
-
-        .visual-main::before {
-            width: 350px;
-            height: 350px;
-        }
-
-        .visual-main::after {
-            width: 220px;
-            height: 220px;
-        }
-
-        .visual-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .visual-icon {
-            font-size: 70px;
-            margin-bottom: 15px;
-        }
-
-        .visual-content h3 {
-            font-size: 23px;
-            margin-bottom: 5px;
-        }
-
-        .visual-content p {
-            color: #cce1da;
-            font-size: 13px;
-        }
-
-        .floating-card {
-            position: absolute;
-            background: white;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            border-radius: 15px;
-            padding: 16px 20px;
-        }
-
-        .floating-card.one {
-            right: 0;
-            top: 65px;
-        }
-
-        .floating-card.two {
-            left: 0;
-            bottom: 65px;
-        }
-
-        .floating-card strong {
-            display: block;
-            color: var(--primary);
-            font-size: 23px;
-        }
-
-        .floating-card span {
-            color: #77847f;
-            font-size: 11px;
-        }
-
-        /* =========================
-           Stats
-        ========================= */
-
-        .stats {
-            position: relative;
-            margin-top: -45px;
-            z-index: 10;
-        }
-
-        .stats-box {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            overflow: hidden;
-        }
-
-        .stat {
-            padding: 28px 15px;
-            text-align: center;
-            border-left: 1px solid var(--border);
-        }
-
-        .stat:last-child {
-            border-left: 0;
-        }
-
-        .stat strong {
-            display: block;
-            color: var(--primary);
-            font-size: 32px;
-            margin-bottom: 3px;
-        }
-
-        .stat span {
-            color: var(--text);
-            font-size: 12px;
-        }
-
-        /* =========================
-           Sections
-        ========================= */
-
-        section {
-            scroll-margin-top: 100px;
-        }
-
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-header {
-            max-width: 650px;
-            margin: 0 auto 50px;
-            text-align: center;
-        }
-
-        .section-label {
-            color: var(--primary);
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .section-header h2 {
-            font-size: 36px;
-            color: var(--dark);
-            margin-bottom: 12px;
-        }
-
-        .section-header p {
-            color: var(--text);
-            font-size: 14px;
-        }
-
-        /* =========================
-           About
-        ========================= */
-
-        .about {
-            background: var(--light);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .about-card {
-            background: white;
-            border-radius: 25px;
-            padding: 45px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-        }
-
-        .about-number {
-            font-size: 80px;
-            line-height: 1;
-            color: var(--primary-light);
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .about-card h3 {
-            color: var(--primary);
-            font-size: 22px;
-        }
-
-        .about-text h2 {
-            font-size: 35px;
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            color: var(--text);
-            margin-bottom: 18px;
-            font-size: 15px;
-        }
-
-        .check-list {
-            list-style: none;
-            margin-top: 25px;
-        }
-
-        .check-list li {
-            margin-bottom: 12px;
-            color: #53625d;
-            font-size: 14px;
-        }
-
-        .check-list li::before {
-            content: "✓";
-            color: white;
-            background: var(--primary);
-            width: 22px;
-            height: 22px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-left: 9px;
-            font-size: 11px;
-        }
-
-        /* =========================
-           Programs
-        ========================= */
-
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .program {
-            padding: 30px;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            transition: 0.3s;
-            background: white;
-        }
-
-        .program:hover {
-            transform: translateY(-7px);
-            box-shadow: var(--shadow);
-            border-color: #d7e8e2;
-        }
-
-        .program-icon {
-            width: 58px;
-            height: 58px;
-            border-radius: 16px;
-            background: var(--primary-light);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            margin-bottom: 22px;
-        }
-
-        .program h3 {
-            font-size: 18px;
-            margin-bottom: 9px;
-        }
-
-        .program p {
-            color: var(--text);
-            font-size: 13px;
-        }
-
-        /* =========================
-           Impact
-        ========================= */
-
-        .impact {
-            background: var(--dark);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .impact::before {
-            content: "";
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 50%;
-            left: -220px;
-            top: -200px;
-        }
-
-        .impact .section-header h2 {
-            color: white;
-        }
-
-        .impact .section-header p {
-            color: #aebfb9;
-        }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .impact-card {
-            border: 1px solid rgba(255,255,255,0.09);
-            background: rgba(255,255,255,0.04);
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-        }
-
-        .impact-card strong {
-            display: block;
-            font-size: 42px;
-            color: #d8bd7f;
-            margin-bottom: 5px;
-        }
-
-        .impact-card span {
-            color: #c0cfca;
-            font-size: 13px;
-        }
-
-        /* =========================
-           News
-        ========================= */
-
-        .news {
-            background: var(--light);
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .news-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .news-image {
-            height: 180px;
-            background:
-                linear-gradient(135deg, rgba(23,107,87,.9), rgba(13,79,64,.8)),
-                radial-gradient(circle at 30% 30%, #ffffff33, transparent 30%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 50px;
-        }
-
-        .news-content {
-            padding: 24px;
-        }
-
-        .news-date {
-            color: var(--primary);
-            font-size: 11px;
-            margin-bottom: 8px;
-        }
-
-        .news-content h3 {
-            font-size: 17px;
-            margin-bottom: 8px;
-        }
-
-        .news-content p {
-            color: var(--text);
-            font-size: 12px;
-        }
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta {
-            padding: 90px 0;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 28px;
-            padding: 60px;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .cta-box::after {
-            content: "✦";
-            position: absolute;
-            left: 50px;
-            top: 10px;
-            font-size: 150px;
-            color: rgba(255,255,255,0.04);
-        }
-
-        .cta-box h2 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
-
-        .cta-box p {
-            color: #d2e3de;
-            font-size: 14px;
-            max-width: 650px;
-        }
-
-        .cta .btn {
-            background: white;
-            color: var(--primary);
-            white-space: nowrap;
-        }
-
-        /* =========================
-           Contact
-        ========================= */
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .contact-card {
-            padding: 35px;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            background: white;
-        }
-
-        .contact-card h3 {
-            margin-bottom: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            margin-bottom: 18px;
-        }
-
-        .contact-icon {
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
-            background: var(--primary-light);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .contact-item strong {
-            display: block;
-            font-size: 13px;
-        }
-
-        .contact-item span {
-            color: var(--text);
-            font-size: 12px;
-        }
-
-        /* =========================
-           Footer
-        ========================= */
-
-        footer {
-            background: #10241f;
-            color: white;
-            padding: 45px 0 25px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 50px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .footer-brand p {
-            color: #a7b8b2;
-            font-size: 12px;
-            max-width: 400px;
-            margin-top: 15px;
-        }
-
-        .footer h4 {
-            margin-bottom: 15px;
-            font-size: 14px;
-        }
-
-        .footer ul {
-            list-style: none;
-        }
-
-        .footer li {
-            margin-bottom: 8px;
-            color: #9cafaa;
-            font-size: 12px;
-        }
-
-        .copyright {
-            padding-top: 22px;
-            text-align: center;
-            color: #82958e;
-            font-size: 11px;
-        }
-
-        /* =========================
-           Top button
-        ========================= */
-
-        .top-btn {
-            position: fixed;
-            bottom: 25px;
-            left: 25px;
-            width: 45px;
-            height: 45px;
-            border: 0;
-            border-radius: 50%;
-            background: var(--primary);
-            color: white;
-            cursor: pointer;
-            display: none;
-            z-index: 900;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .top-btn.show {
-            display: block;
-        }
-
-        /* =========================
-           Mobile
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            nav {
-                display: none;
-                position: absolute;
-                top: 82px;
-                right: 0;
-                left: 0;
-                background: white;
-                padding: 20px 5%;
-                box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-                flex-direction: column;
-                align-items: stretch;
-                gap: 5px;
-            }
-
-            nav.active {
-                display: flex;
-            }
-
-            nav a {
-                padding: 12px;
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                padding: 70px 0 100px;
-            }
-
-            .hero {
-                min-height: auto;
-            }
-
-            .hero-visual {
-                height: 400px;
-            }
-
-            .stats-box {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stat:nth-child(2) {
-                border-left: 0;
-            }
-
-            .stat:nth-child(3),
-            .stat:nth-child(4) {
-                border-top: 1px solid var(--border);
-            }
-
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .programs-grid,
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .impact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-box {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 40px 30px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
-
-        @media (max-width: 550px) {
-
-            .brand-text strong {
-                font-size: 13px;
-            }
-
-            .brand-logo {
-                width: 45px;
-                height: 45px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero-description {
-                font-size: 14px;
-            }
-
-            .hero-visual {
-                height: 360px;
-            }
-
-            .visual-main {
-                width: 280px;
-                height: 330px;
-            }
-
-            .floating-card.one {
-                right: -5px;
-            }
-
-            .floating-card.two {
-                left: -5px;
-            }
-
-            .section {
-                padding: 75px 0;
-            }
-
-            .section-header h2 {
-                font-size: 29px;
-            }
-
-            .about-card {
-                padding: 30px;
-            }
-
-            .cta-box h2 {
-                font-size: 27px;
-            }
-        }
-
     </style>
 </head>
+<body class="antialiased selection:bg-teal-500 selection:text-white">
 
-<body>
+    <!-- Background Decorative Blobs -->
+    <div class="blob-bg top-20 right-10"></div>
+    <div class="blob-bg bottom-40 left-10" style="animation-delay: 5s;"></div>
 
-<!-- =========================
-     Header
-========================= -->
-
-<header>
-
-    <div class="container navbar">
-
-        <a href="#home" class="brand">
-
-            <div class="brand-logo">
-                س
+    <!-- Header / Navbar -->
+    <header class="glass-nav sticky top-0 z-50 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-12 h-12 bg-white/90 rounded-2xl flex items-center justify-center p-1.5 border border-teal-200 shadow-sm overflow-hidden transform hover:scale-105 transition">
+                    <img src="شعار الجمعية.png" alt="شعار جمعية الساعي على الأرملة بالبكيرية" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/150x150/0f766e/ffffff?text=الساعي'">
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-sm sm:text-base text-slate-900 leading-tight">جمعية الساعي على الأرملة</h1>
+                    <p class="text-[11px] text-teal-700 font-bold tracking-wide">بمحافظة البكيرية (مرخصة رسمياً)</p>
+                </div>
             </div>
+            
+            <nav class="hidden lg:flex items-center space-x-7 space-x-reverse font-semibold text-sm text-slate-600">
+                <a href="#about" class="hover:text-teal-700 transition">عن الجمعية</a>
+                <a href="#services" class="hover:text-teal-700 transition">خدماتنا التنموية</a>
+                <a href="#calculator" class="hover:text-teal-700 transition">حاسبة التبرع والزكاة</a>
+                <a href="#projects" class="hover:text-teal-700 transition">المشاريع</a>
+                <a href="#beneficiary" class="hover:text-teal-700 transition">طلب مساعدة</a>
+                <a href="#faq" class="hover:text-teal-700 transition">الأسئلة الشائعة</a>
+            </nav>
 
-            <div class="brand-text">
-                <strong>جمعية الساعي على الأرملة</strong>
-                <span>بمحافظة البكيرية</span>
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <a href="#donate" class="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-5 py-2.5 rounded-2xl font-bold text-sm shadow-lg shadow-teal-600/30 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-hand-holding-heart animate-pulse"></i>
+                    <span>تبرع سريع</span>
+                </a>
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-700 hover:text-teal-700 text-2xl p-1.5">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
             </div>
+        </div>
 
-        </a>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden glass-card border-t border-slate-200 px-6 pt-4 pb-6 space-y-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">عن الجمعية</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">خدماتنا التنموية</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">حاسبة التبرع والزكاة</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">المشاريع</a>
+            <a href="#beneficiary" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">طلب مساعدة</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-2 border-b border-slate-100">الأسئلة الشائعة</a>
+        </div>
+    </header>
 
-        <nav id="nav">
-
-            <a href="#home">الرئيسية</a>
-            <a href="#about">عن الجمعية</a>
-            <a href="#programs">برامجنا</a>
-            <a href="#impact">الأثر</a>
-            <a href="#news">الأخبار</a>
-            <a href="#contact">تواصل معنا</a>
-
-            <a href="#support" class="nav-button">
-                ساهم معنا
-            </a>
-
-        </nav>
-
-        <button class="menu-btn" id="menuBtn">
-            ☰
-        </button>
-
-    </div>
-
-</header>
-
-
-<!-- =========================
-     Hero
-========================= -->
-
-<section class="hero" id="home">
-
-    <div class="container hero-content">
-
-        <div class="hero-text">
-
-            <div class="eyebrow">
-                جمعية أهلية غير ربحية
+    <!-- Hero Section -->
+    <section class="glass-hero text-white py-24 lg:py-36 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md text-teal-100 text-xs sm:text-sm font-semibold px-5 py-2 rounded-full mb-6 border border-white/20 shadow-inner">
+                <i class="fa-solid fa-star text-amber-300"></i>
+                <span>الساعي على الأرملة كالمجاهد في سبيل الله</span>
             </div>
-
-            <h1>
-                نصنع الأثر،
-                <br>
-                <span>ونبني حياة أفضل</span>
+            <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6 max-w-4xl mx-auto leading-tight drop-shadow-md">
+                تمكين، كرامة، واستقرار مستدام للأسر بالبكيرية
             </h1>
-
-            <p class="hero-description">
-                نسعى إلى رعاية الأرامل وتمكينهن، وتقديم البرامج
-                والمبادرات التي تسهم في تحقيق الاستقرار وتحسين
-                جودة الحياة وصناعة أثر مستدام في المجتمع.
+            <p class="text-lg sm:text-xl text-slate-100 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                مؤسسة خيرية تخصصية تسعى لتقديم الرعاية الشاملة للأرامل والأيتام وفق أعلى معايير الحوكمة والشفافية بمنطقة القصيم.
             </p>
-
-            <div class="hero-buttons">
-
-                <a href="#programs" class="btn btn-primary">
-                    اكتشف برامجنا
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#donate" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-2xl shadow-2xl transition transform hover:-translate-y-1 text-base flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-gift text-lg"></i>
+                    <span>ساهم معنا في الدعم</span>
                 </a>
-
-                <a href="#about" class="btn btn-outline">
-                    تعرف على الجمعية
+                <a href="#calculator" class="glass-card hover:bg-white/20 text-white font-bold px-8 py-4 rounded-2xl transition text-base flex items-center justify-center gap-2 border-white/30">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>حاسبة التبرع التفاعلية</span>
                 </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Impact Stats Bar -->
+    <section id="impact" class="max-w-6xl mx-auto px-4 relative z-20 -mt-12 mb-20">
+        <div class="glass-card rounded-3xl p-6 sm:p-10 shadow-2xl border border-white/90 grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-x-reverse divide-slate-200/60">
+            <div class="p-2 transform hover:scale-105 transition">
+                <div class="text-3xl lg:text-5xl font-black text-teal-700 mb-1">+450</div>
+                <div class="text-xs sm:text-sm text-slate-600 font-bold">أرملة مستفيدة برعاية كاملة</div>
+            </div>
+            <div class="p-2 transform hover:scale-105 transition">
+                <div class="text-3xl lg:text-5xl font-black text-cyan-600 mb-1">+1,200</div>
+                <div class="text-xs sm:text-sm text-slate-600 font-bold">يتيم تحت الرعاية والتعليم</div>
+            </div>
+            <div class="p-2 transform hover:scale-105 transition">
+                <div class="text-3xl lg:text-5xl font-black text-amber-600 mb-1">+15</div>
+                <div class="text-xs sm:text-sm text-slate-600 font-bold">برنامج ومبادرة تنموية</div>
+            </div>
+            <div class="p-2 transform hover:scale-105 transition">
+                <div class="text-3xl lg:text-5xl font-black text-emerald-800 mb-1">100%</div>
+                <div class="text-xs sm:text-sm text-slate-600 font-bold">شفافية وإفصاح مالي معتمد</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator -->
+    <section id="calculator" class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl border border-teal-100">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200">أدوات ذكية</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-3 mb-2">حاسبة التبرع والزكاة التفاعلية</h2>
+                <p class="text-slate-600 text-sm">حدد نوع المساهمة والمبلغ لشاهد الأثر المباشر الذي تقدمه للأسر المستحقة.</p>
             </div>
 
-        </div>
-
-
-        <div class="hero-visual">
-
-            <div class="visual-main">
-
-                <div class="visual-content">
-
-                    <div class="visual-icon">
-                        🤝
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">اختر نوع المساهمة:</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button type="button" onclick="setCalcType('zakat')" id="btnZakat" class="p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md">زكاة مال</button>
+                            <button type="button" onclick="setCalcType('sadaqah')" id="btnSadaqah" class="p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500">صدقة عامة</button>
+                            <button type="button" onclick="setCalcType('kefalah')" id="btnKefalah" class="p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500">كفالة أسرة</button>
+                        </div>
                     </div>
 
-                    <h3>
-                        معًا نصنع الأثر
-                    </h3>
-
-                    <p>
-                        رعاية • تمكين • أثر
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="floating-card one">
-
-                <strong>150+</strong>
-
-                <span>
-                    مستفيدة
-                </span>
-
-            </div>
-
-
-            <div class="floating-card two">
-
-                <strong>20+</strong>
-
-                <span>
-                    برنامجًا ومبادرة
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     Stats
-========================= -->
-
-<section class="stats">
-
-    <div class="container">
-
-        <div class="stats-box">
-
-            <div class="stat">
-                <strong>150+</strong>
-                <span>مستفيدة</span>
-            </div>
-
-            <div class="stat">
-                <strong>20+</strong>
-                <span>برنامجًا ومبادرة</span>
-            </div>
-
-            <div class="stat">
-                <strong>1000+</strong>
-                <span>مستفيد من الخدمات</span>
-            </div>
-
-            <div class="stat">
-                <strong>10+</strong>
-                <span>شراكات مجتمعية</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     About
-========================= -->
-
-<section class="section about" id="about">
-
-    <div class="container about-grid">
-
-        <div class="about-card">
-
-            <div class="about-number">
-                01
-            </div>
-
-            <h3>
-                رسالتنا
-            </h3>
-
-            <p style="color:#697873; margin-top:12px;">
-                رعاية الأرامل وتمكينهن من خلال خدمات وبرامج
-                نوعية تحقق الاستقرار وتصنع أثرًا مستدامًا.
-            </p>
-
-        </div>
-
-
-        <div class="about-text">
-
-            <div class="section-label">
-                عن الجمعية
-            </div>
-
-            <h2>
-                نؤمن أن الأثر الحقيقي يبدأ من الإنسان
-            </h2>
-
-            <p>
-                تعمل جمعية الساعي على الأرملة بمحافظة البكيرية
-                على تقديم خدمات وبرامج متنوعة تلبي احتياجات
-                المستفيدات وتساعدهن على تجاوز التحديات.
-            </p>
-
-            <p>
-                ونحرص على بناء شراكات مجتمعية فاعلة، واستثمار
-                الموارد بكفاءة، وتطوير المبادرات التي تحقق أثرًا
-                ملموسًا ومستدامًا.
-            </p>
-
-            <ul class="check-list">
-
-                <li>
-                    رعاية الأسر المستفيدة وتلبية احتياجاتها.
-                </li>
-
-                <li>
-                    تمكين المستفيدات وتنمية قدراتهن.
-                </li>
-
-                <li>
-                    بناء شراكات مجتمعية فاعلة.
-                </li>
-
-                <li>
-                    قياس الأثر وتحسين جودة الخدمات.
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     Programs
-========================= -->
-
-<section class="section" id="programs">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-label">
-                برامجنا
-            </div>
-
-            <h2>
-                مبادرات تصنع فرقًا
-            </h2>
-
-            <p>
-                نقدم مجموعة من البرامج التي تستهدف الاحتياجات
-                الأساسية والتنموية للمستفيدات.
-            </p>
-
-        </div>
-
-
-        <div class="programs-grid">
-
-            <article class="program">
-
-                <div class="program-icon">
-                    🏠
-                </div>
-
-                <h3>
-                    دعم السكن
-                </h3>
-
-                <p>
-                    المساهمة في توفير بيئة سكنية مناسبة وآمنة
-                    للأسر المستفيدة.
-                </p>
-
-            </article>
-
-
-            <article class="program">
-
-                <div class="program-icon">
-                    💡
-                </div>
-
-                <h3>
-                    تفريج الكرب
-                </h3>
-
-                <p>
-                    المساهمة في تخفيف الأعباء المالية وسداد
-                    الاحتياجات الأساسية للأسر.
-                </p>
-
-            </article>
-
-
-            <article class="program">
-
-                <div class="program-icon">
-                    ❄️
-                </div>
-
-                <h3>
-                    توفير أجهزة التكييف
-                </h3>
-
-                <p>
-                    توفير الاحتياجات الأساسية التي تساعد الأسر
-                    على تحسين جودة الحياة.
-                </p>
-
-            </article>
-
-
-            <article class="program">
-
-                <div class="program-icon">
-                    👗
-                </div>
-
-                <h3>
-                    الكسوة
-                </h3>
-
-                <p>
-                    توفير الكسوة والمستلزمات الموسمية للأسر
-                    المستفيدة.
-                </p>
-
-            </article>
-
-
-            <article class="program">
-
-                <div class="program-icon">
-                    💰
-                </div>
-
-                <h3>
-                    الكفالة المالية
-                </h3>
-
-                <p>
-                    تقديم الدعم المالي للأسر وفق الضوابط
-                    والاحتياجات المعتمدة.
-                </p>
-
-            </article>
-
-
-            <article class="program">
-
-                <div class="program-icon">
-                    🌱
-                </div>
-
-                <h3>
-                    التمكين والتدريب
-                </h3>
-
-                <p>
-                    تطوير مهارات المستفيدات وتعزيز فرص الاستقلال
-                    والاعتماد على الذات.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     Impact
-========================= -->
-
-<section class="section impact" id="impact">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-label">
-                أثرنا
-            </div>
-
-            <h2>
-                أرقام تحكي قصة أثر
-            </h2>
-
-            <p>
-                نعمل على تحويل الدعم إلى نتائج ملموسة ومستدامة.
-            </p>
-
-        </div>
-
-
-        <div class="impact-grid">
-
-            <div class="impact-card">
-                <strong>150+</strong>
-                <span>أسرة مستفيدة</span>
-            </div>
-
-            <div class="impact-card">
-                <strong>20+</strong>
-                <span>برنامجًا ومبادرة</span>
-            </div>
-
-            <div class="impact-card">
-                <strong>1,000+</strong>
-                <span>خدمة ومساعدة مقدمة</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     News
-========================= -->
-
-<section class="section news" id="news">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-label">
-                آخر الأخبار
-            </div>
-
-            <h2>
-                أخبار وفعاليات الجمعية
-            </h2>
-
-            <p>
-                تابع آخر المبادرات والبرامج والفعاليات التي تنفذها الجمعية.
-            </p>
-
-        </div>
-
-
-        <div class="news-grid">
-
-            <article class="news-card">
-
-                <div class="news-image">
-                    📢
-                </div>
-
-                <div class="news-content">
-
-                    <div class="news-date">
-                        أخبار الجمعية
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-bold text-slate-700">المبلغ المقترح (ريال سعودي):</label>
+                            <span id="amountDisplay" class="font-black text-teal-700 text-lg">500 ر.س</span>
+                        </div>
+                        <input type="range" id="amountRange" min="50" max="5000" step="50" value="500" oninput="updateCalculator(this.value)" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-teal-600">
+                        <div class="flex justify-between text-xs text-slate-400 mt-1">
+                            <span>50 ر.س</span>
+                            <span>2,500 ر.س</span>
+                            <span>5,000 ر.س</span>
+                        </div>
                     </div>
 
-                    <h3>
-                        برامج نوعية لخدمة المستفيدات
-                    </h3>
-
-                    <p>
-                        نسعى باستمرار إلى تطوير برامجنا وتحسين
-                        جودة الخدمات المقدمة للأسر المستفيدة.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="news-card">
-
-                <div class="news-image">
-                    🤝
-                </div>
-
-                <div class="news-content">
-
-                    <div class="news-date">
-                        شراكات مجتمعية
+                    <div class="flex gap-2 flex-wrap">
+                        <button onclick="quickAmount(100)" class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">100 ر.س</button>
+                        <button onclick="quickAmount(500)" class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">500 ر.س</button>
+                        <button onclick="quickAmount(1000)" class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">1,000 ر.س</button>
+                        <button onclick="quickAmount(3000)" class="px-4 py-2 rounded-xl bg-white/80 hover:bg-teal-50 font-bold text-xs text-slate-700 border border-slate-200 transition">3,000 ر.س</button>
                     </div>
-
-                    <h3>
-                        شراكات لصناعة أثر أكبر
-                    </h3>
-
-                    <p>
-                        نعمل مع شركائنا في المجتمع لتوسيع نطاق
-                        الأثر والوصول إلى أكبر عدد من المستفيدات.
-                    </p>
-
                 </div>
 
-            </article>
-
-
-            <article class="news-card">
-
-                <div class="news-image">
-                    🌱
-                </div>
-
-                <div class="news-content">
-
-                    <div class="news-date">
-                        تمكين
+                <div class="bg-gradient-to-br from-teal-900 to-cyan-900 text-white p-8 rounded-3xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 text-teal-300 text-xs font-bold mb-4">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>قياس الأثر المتوقع لمساهمتك</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-3" id="impactTitle">كفالة جزئية ودعم معيشي</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed mb-6" id="impactDesc">
+                            هذا المبلغ يساهم في سداد متطلبات شهرية رئيسية لأسرة أرملة محتاجة في محافظة البكيرية مع إدخال السرور على قلوب الأبناء.
+                        </p>
                     </div>
-
-                    <h3>
-                        الاستثمار في قدرات المستفيدات
-                    </h3>
-
-                    <p>
-                        نؤمن بأن التمكين أحد أهم الطرق لبناء مستقبل
-                        أفضل وأكثر استدامة.
-                    </p>
-
+                    <button onclick="executeDonationFromCalc()" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3.5 rounded-2xl transition shadow-xl flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-heart"></i>
+                        <span id="donateBtnText">تبرع بـ 500 ر.س الآن</span>
+                    </button>
                 </div>
-
-            </article>
-
+            </div>
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CTA
-========================= -->
-
-<section class="cta" id="support">
-
-    <div class="container">
-
-        <div class="cta-box">
-
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-
-                <h2>
-                    كن شريكًا في صناعة الأثر
+                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-100">من نحن</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-4 mb-6 leading-tight">
+                    نبني جسور الأمل والدعم المستدام في محافظة البكيرية
                 </h2>
-
-                <p>
-                    مساهمتك تساعدنا على الاستمرار في تقديم البرامج
-                    والخدمات التي تصنع فرقًا حقيقيًا في حياة الأسر.
+                <p class="text-slate-600 leading-relaxed mb-6 text-sm sm:text-base">
+                    نحن جمعية "الساعي على الأرملة" مسجلة رسمياً بمحافظة البكيرية، نكرس جهودنا لتقديم الرعاية الشاملة والعناية الفائقة بالأرامل وأسرهن عبر المساعدات النقدية والعينية، وبرامج التأهيل المهني والتمكين المعيشي.
                 </p>
-
-            </div>
-
-            <a href="#contact" class="btn">
-                تواصل معنا
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     Contact
-========================= -->
-
-<section class="section" id="contact">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-label">
-                تواصل معنا
-            </div>
-
-            <h2>
-                نحن بالقرب منك
-            </h2>
-
-            <p>
-                يسعدنا استقبال استفساراتكم ومقترحاتكم وشراكاتكم.
-            </p>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-            <div class="contact-card">
-
-                <h3>
-                    معلومات التواصل
-                </h3>
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        📍
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass-card p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-bullseye text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">رؤيتنا الاستراتيجية</h3>
+                        <p class="text-xs text-slate-500">الريادة في تمكين ورعاية الأرامل وتحقيق استقرارهم المعيشي والاجتماعي.</p>
                     </div>
+                    <div class="glass-card p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-eye text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">رسالتنا الإنسانية</h3>
+                        <p class="text-xs text-slate-500">تقديم خدمات إنسانية وتنموية متكاملة بكفاءة عالية واحترافية مطلقة.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="glass-card p-3 rounded-3xl shadow-2xl border border-white">
+                    <img src="https://placehold.co/600x450/0f766e/ffffff?text=Al-Bukayriyah+Community" alt="جمعية الساعي بالبكيرية" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-amber-500 text-slate-950 p-5 rounded-2xl shadow-xl max-w-xs hidden sm:block border-2 border-white font-bold text-xs">
+                    <p>"الساعي على الأرملة كالمجاهد في سبيل الله أو القائم الليل الصائم النهار"</p>
+                    <span class="text-[10px] mt-1 block opacity-85">- حديث شريف</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-100/60 backdrop-blur-md relative border-y border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-100">خدماتنا وبرامجنا</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-4 mb-4">خدمات متكاملة تصنع الفارق</h2>
+                <p class="text-slate-600 text-sm sm:text-base">حزمة من البرامج الاجتماعية والتنموية المصممة بعناية لتلبية احتياجات الأسر بكل كرامة وسرية.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card rounded-3xl p-8 shadow-lg hover:shadow-2xl transition duration-300 group border border-white/80">
+                    <div class="w-14 h-14 rounded-2xl bg-teal-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-teal-700 transition">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-3">الدعم المالي والمعيشي</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        صرف إعانات نقدية شهرية وموسمية تغطي المتطلبات الأساسية المعيشية وتوفر الاستقرار المالي للأسر المستفيدة.
+                    </p>
+                    <a href="#donate" class="text-teal-700 font-bold text-sm flex items-center gap-2 hover:gap-3 transition">
+                        <span>دعم هذا البرنامج</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card rounded-3xl p-8 shadow-lg hover:shadow-2xl transition duration-300 group border border-white/80">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-cyan-700 transition">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-3">التعليم والتأهيل المهني</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        توفير المنح الدراسية للأبناء، ودورات تدريبية متخصصة للأمهات لتمكينهن من دخول سوق العمل والاعتماد على الذات.
+                    </p>
+                    <a href="#donate" class="text-cyan-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition">
+                        <span>دعم هذا البرنامج</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card rounded-3xl p-8 shadow-lg hover:shadow-2xl transition duration-300 group border border-white/80">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-amber-700 transition">
+                        <i class="fa-solid fa-house-chimney-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-3">الرعاية السكنية والصحية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        المساهمة في سداد الإيجارات، وترميم المنازل، وتوفير التغطيات والتأمين الصحي والأدوية للأسر المحتاجة.
+                    </p>
+                    <a href="#donate" class="text-amber-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition">
+                        <span>دعم هذا البرنامج</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficiary Request Form -->
+    <section id="beneficiary" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl border border-teal-100">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200">بوابة المستفيدين</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-3 mb-2">تقديم طلب خدمة أو مساعدة</h2>
+                <p class="text-slate-600 text-sm">تعبئة نموذج الطلب تضمن السرية التامة ودراسة الحالة بأقصى سرعة وفق اللوائح المعتمدة.</p>
+            </div>
+
+            <form id="beneficiaryForm" onsubmit="handleBeneficiarySubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                        <strong>الموقع</strong>
-                        <span>محافظة البكيرية – منطقة القصيم</span>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">الاسم الثلاثي:</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm" placeholder="الاسم الكريم">
                     </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        📞
-                    </div>
-
                     <div>
-                        <strong>الهاتف</strong>
-                        <span>يضاف رقم الجمعية هنا</span>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">رقم الجوال (للتواصل):</label>
+                        <input type="tel" required class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm" placeholder="05xxxxxxxx">
                     </div>
-
                 </div>
 
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        ✉️
-                    </div>
-
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                        <strong>البريد الإلكتروني</strong>
-                        <span>يضاف البريد الإلكتروني هنا</span>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">نوع الخدمة المطلوبة:</label>
+                        <select class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm">
+                            <option>إعانة مالية شهرية</option>
+                            <option>كفالة أيتام</option>
+                            <option>مساعدة سكنية (إيجار / ترميم)</option>
+                            <option>دعم تعليمي وتدريب مهني</option>
+                            <option>سلة غذائية عينية</option>
+                        </select>
                     </div>
-
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">عدد أفراد الأسرة:</label>
+                        <input type="number" min="1" value="1" required class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm">
+                    </div>
                 </div>
 
-            </div>
-
-
-            <div class="contact-card">
-
-                <h3>
-                    رسالتنا
-                </h3>
-
-                <p style="color:#697873; font-size:14px; margin-bottom:20px;">
-                    نرحب بجميع الاستفسارات والمقترحات وفرص التعاون
-                    والشراكات التي تسهم في خدمة الأرامل وأسرهن.
-                </p>
-
-                <a href="mailto:info@example.com"
-                   class="btn btn-primary">
-                    إرسال رسالة
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     Footer
-========================= -->
-
-<footer>
-
-    <div class="container footer">
-
-        <div class="footer-grid">
-
-            <div class="footer-brand">
-
-                <div class="brand">
-
-                    <div class="brand-logo">
-                        س
-                    </div>
-
-                    <div class="brand-text">
-                        <strong style="color:white;">
-                            جمعية الساعي على الأرملة
-                        </strong>
-
-                        <span style="color:#8fa39b;">
-                            بمحافظة البكيرية
-                        </span>
-                    </div>
-
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">تفاصيل الحالة والاحتياج:</label>
+                    <textarea rows="4" required class="w-full px-4 py-3 rounded-2xl bg-white/80 border border-slate-200 focus:outline-none focus:border-teal-600 transition text-sm" placeholder="اكتب نبذة مختصرة عن الحالة لتسهيل دراستها وسرعة خدمتها..."></textarea>
                 </div>
 
-                <p>
-                    نسعى إلى رعاية الأرامل وتمكينهن وصناعة أثر
-                    مستدام يساهم في بناء مجتمع أكثر استقرارًا.
-                </p>
+                <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-black py-4 rounded-2xl transition shadow-lg text-base flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>إرسال الطلب بسرية تامة</span>
+                </button>
+            </form>
+        </div>
+    </section>
 
+    <!-- Donation Section -->
+    <section id="donate" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0f766e_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 font-bold text-xs uppercase bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/20">باب الخير مفتوح</span>
+                <h2 class="text-3xl sm:text-4xl font-black mt-4 mb-4">كن شريكاً في الأجر والدعم</h2>
+                <p class="text-slate-300 text-sm sm:text-base">اختر سهمك الخيري وساهم معنا في تفريج كربة الأرامل وأسرهم في محافظة البكيرية.</p>
             </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-slate-700 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <span class="bg-teal-500/20 text-teal-300 text-xs font-bold px-3 py-1 rounded-full">سهم عام</span>
+                        <h3 class="text-3xl font-black mt-4 mb-2">100 ر.س</h3>
+                        <p class="text-slate-400 text-sm mb-6">يساهم في توفير سلة غذائية أساسية لأسرة متعففة لشهر كامل.</p>
+                    </div>
+                    <button onclick="alertDonation(100)" class="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold py-3.5 rounded-2xl transition shadow-lg">تبرع بـ 100 ر.س</button>
+                </div>
 
-            <div>
+                <div class="bg-slate-800/90 backdrop-blur-xl rounded-3xl p-8 border-2 border-teal-500 flex flex-col justify-between relative shadow-2xl transform md:-translate-y-2">
+                    <div class="absolute -top-3.5 right-8 bg-teal-500 text-slate-950 text-xs font-black px-4 py-1 rounded-full shadow-md">الأكثر إقبالاً</div>
+                    <div>
+                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">سهم الرعاية</span>
+                        <h3 class="text-3xl font-black mt-4 mb-2">500 ر.س</h3>
+                        <p class="text-slate-400 text-sm mb-6">يغطي جزءاً من الإيجار أو الرسوم الدراسية لأبناء الأرامل.</p>
+                    </div>
+                    <button onclick="alertDonation(500)" class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-black py-3.5 rounded-2xl transition shadow-xl">تبرع بـ 500 ر.س</button>
+                </div>
 
-                <h4>
-                    روابط سريعة
-                </h4>
-
-                <ul>
-
-                    <li>
-                        <a href="#home">الرئيسية</a>
-                    </li>
-
-                    <li>
-                        <a href="#about">عن الجمعية</a>
-                    </li>
-
-                    <li>
-                        <a href="#programs">برامجنا</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">تواصل معنا</a>
-                    </li>
-
-                </ul>
-
+                <div class="bg-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-slate-700 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-3 py-1 rounded-full">كفالة كاملة</span>
+                        <h3 class="text-3xl font-black mt-4 mb-2">1,000 ر.س</h3>
+                        <p class="text-slate-400 text-sm mb-6">كفالة شاملة لأسرة أرملة لمدة شهر كامل مع البرامج التنموية.</p>
+                    </div>
+                    <button onclick="alertDonation(1000)" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3.5 rounded-2xl transition shadow-lg">تبرع بـ 1,000 ر.س</button>
+                </div>
             </div>
+        </div>
+    </section>
 
-
-            <div>
-
-                <h4>
-                    الجمعية
-                </h4>
-
-                <ul>
-
-                    <li>
-                        الرعاية
-                    </li>
-
-                    <li>
-                        التمكين
-                    </li>
-
-                    <li>
-                        الشراكة المجتمعية
-                    </li>
-
-                    <li>
-                        صناعة الأثر
-                    </li>
-
-                </ul>
-
-            </div>
-
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-teal-700 font-bold text-xs uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-100">الاستفسارات</span>
+            <h2 class="text-3xl font-black text-slate-900 mt-4 mb-3">الأسئلة الشائعة</h2>
+            <p class="text-slate-600 text-sm">كل ما ترغب بمعرفته حول أعمال الجمعية، قنوات التبرع، وآلية التسجيل.</p>
         </div>
 
+        <div class="space-y-4">
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 transition">
+                <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-right font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+                    <span>هل الجمعية مرخصة رسمياً ومن أين تشرف؟</span>
+                    <i class="fa-solid fa-chevron-down text-teal-600 transition-transform duration-300" id="faqIcon1"></i>
+                </button>
+                <div id="faqContent1" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                    نعم، جمعية "الساعي على الأرملة" بمحافظة البكيرية مسجلة رسمياً لدى وزارة الموارد البشرية والتنمية الاجتماعية برخصة معتمدة، وتخضع لأنظمة الحوكمة والرقابة المالية.
+                </div>
+            </div>
 
-        <div class="copyright">
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 transition">
+                <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-right font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+                    <span>كيف يمكنني كفالة أسرة أو متابعة أثري الخيري؟</span>
+                    <i class="fa-solid fa-chevron-down text-teal-600 transition-transform duration-300" id="faqIcon2"></i>
+                </button>
+                <div id="faqContent2" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                    يمكنك اختيار باقة الكفالة أو التبرع من خلال بوابات التبرع المعتمدة، وسيقوم فريق خدمة المتبرع بتزويدك بالتقارير الدورية لطبيعة الأثر المقدم للأسر بكل شفافية.
+                </div>
+            </div>
 
-            © 2026 جمعية الساعي على الأرملة بمحافظة البكيرية
-            <br>
-            جميع الحقوق محفوظة
-
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 transition">
+                <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-right font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+                    <span>ما هي الشروط الأساسية لتسجيل الأرامل المستفيدات؟</span>
+                    <i class="fa-solid fa-chevron-down text-teal-600 transition-transform duration-300" id="faqIcon3"></i>
+                </button>
+                <div id="faqContent3" class="hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                    أن تكون المستفيدة مقيمة في محافظة البكيرية أو المراكز التابعة لها، وتقديم المستندات الرسمية الثبوتية، ويتم دراسة الحالة عبر الباحثة الاجتماعية للجمعية.
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div>
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-10 h-10 bg-white/10 rounded-2xl flex items-center justify-center p-1 overflow-hidden border border-white/20">
+                            <img src="شعار الجمعية.png" alt="الشعار" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/150x150/0f766e/ffffff?text=الساعي'">
+                        </div>
+                        <h3 class="font-bold text-white text-base">جمعية الساعي بالبكيرية</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6">
+                        نسعى لتقديم العمل الخيري بأعلى معايير الحوكمة والشفافية لخدمة الأرامل وأسرهن بمحافظة البكيرية ومنطقة القصيم.
+                    </p>
+                    <div class="flex space-x-3 space-x-reverse">
+                        <a href="#" class="w-10 h-10 rounded-2xl bg-slate-900 hover:bg-teal-600 hover:text-white flex items-center justify-center transition border border-slate-800"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-2xl bg-slate-900 hover:bg-teal-600 hover:text-white flex items-center justify-center transition border border-slate-800"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-2xl bg-slate-900 hover:bg-teal-600 hover:text-white flex items-center justify-center transition border border-slate-800"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
 
-</footer>
+                <div>
+                    <h4 class="font-bold text-white text-base mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#about" class="hover:text-teal-400 transition">عن الجمعية</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition">الخدمات والمشاريع</a></li>
+                        <li><a href="#calculator" class="hover:text-teal-400 transition">حاسبة التبرع</a></li>
+                        <li><a href="#beneficiary" class="hover:text-teal-400 transition">طلب مساعدة</a></li>
+                    </ul>
+                </div>
 
+                <div>
+                    <h4 class="font-bold text-white text-base mb-4">تواصل معنا</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-teal-500"></i><span>محافظة البكيرية، القصيم، السعودية</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-teal-500"></i><span>+966 16 XXX XXXX</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-teal-500"></i><span>info@alsai-bukayriyah.org</span></li>
+                    </ul>
+                </div>
+            </div>
 
-<!-- زر العودة للأعلى -->
+            <div class="border-t border-slate-900 pt-8 text-center text-xs text-slate-500">
+                <p>جميع الحقوق محفوظة © 2026 جمعية الساعي على الأرملة بمحافظة البكيرية.</p>
+            </div>
+        </div>
+    </footer>
 
-<button class="top-btn" id="topBtn">
-    ↑
-</button>
-
-
-<script>
-
-    /* القائمة في الجوال */
-
-    const menuBtn = document.getElementById("menuBtn");
-    const nav = document.getElementById("nav");
-
-    menuBtn.addEventListener("click", function () {
-        nav.classList.toggle("active");
-    });
-
-
-    /* إغلاق القائمة بعد اختيار الرابط */
-
-    document.querySelectorAll("nav a").forEach(function(link) {
-
-        link.addEventListener("click", function() {
-            nav.classList.remove("active");
-        });
-
-    });
-
-
-    /* زر العودة للأعلى */
-
-    const topBtn = document.getElementById("topBtn");
-
-    window.addEventListener("scroll", function() {
-
-        if (window.scrollY > 500) {
-            topBtn.classList.add("show");
-        } else {
-            topBtn.classList.remove("show");
+    <!-- JavaScript Interactive Code -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
         }
 
-    });
+        let currentType = 'zakat';
+        let currentAmount = 500;
 
+        function setCalcType(type) {
+            currentType = type;
+            document.getElementById('btnZakat').className = type === 'zakat' ? 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md' : 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500';
+            document.getElementById('btnSadaqah').className = type === 'sadaqah' ? 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md' : 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500';
+            document.getElementById('btnKefalah').className = type === 'kefalah' ? 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-teal-600 bg-teal-600 text-white shadow-md' : 'p-3 rounded-2xl font-bold text-xs sm:text-sm transition border border-slate-300 bg-white/80 text-slate-700 hover:border-teal-500';
+            updateCalculator(currentAmount);
+        }
 
-    topBtn.addEventListener("click", function() {
+        function quickAmount(val) {
+            document.getElementById('amountRange').value = val;
+            updateCalculator(val);
+        }
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        function updateCalculator(val) {
+            currentAmount = val;
+            document.getElementById('amountDisplay').innerText = val + ' ر.س';
+            document.getElementById('donateBtnText').innerText = 'تبرع بـ ' + val + ' ر.س الآن';
+            
+            const titleElem = document.getElementById('impactTitle');
+            const descElem = document.getElementById('impactDesc');
 
-    });
+            if (currentType === 'zakat') {
+                titleElem.innerText = 'تطهير ونماء لمالك (' + val + ' ر.س)';
+                descElem.innerText = 'زكاتك تصل مباشرة لمستحقيها من الأرامل والأسر المحتاجة بالبكيرية لتوفير احتياجاتهم الأساسية بكل طمأنينة.';
+            } else if (currentType === 'sadaqah') {
+                titleElem.innerText = 'صدقة جارية وخير بركة (' + val + ' ر.س)';
+                descElem.innerText = 'تساهم في المشاريع التنموية والغذائية المستدامة التي تسند عائلات الأيتام والأرامل بمحافظة البكيرية.';
+            } else {
+                titleElem.innerText = 'كفالة رعاية متكاملة (' + val + ' ر.س)';
+                descElem.innerText = 'هذا المبلغ يدعم استقرار أسرة كاملة وتوفير جزء كبير من متطلبات المعيشة والتعليم والكسوة.';
+            }
+        }
 
-</script>
+        function executeDonationFromCalc() {
+            alertDonation(currentAmount);
+        }
 
+        function alertDonation(amount) {
+            const modal = document.createElement('div');
+            modal.innerHTML = `
+                <div style="position: fixed; inset: 0; background: rgba(15, 23, 42, 0.75); display: flex; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(12px);">
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 32px; border-radius: 24px; max-width: 420px; width: 90%; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border: 1px solid rgba(255,255,255,0.8);">
+                        <div style="width: 64px; height: 64px; background: #ecfdf5; color: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 16px; box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.2);">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3 style="font-size: 20px; font-weight: 900; color: #0f172a; margin-bottom: 8px;">شكراً لكرمك وفضلك!</h3>
+                        <p style="font-size: 14px; color: #475569; margin-bottom: 20px; line-height: 1.6;">لقد اخترت المساهمة بمبلغ <strong style="color: #0d9488;">${amount} ريال سعودي</strong>. يمكنك إتمام التبرع السريع أو التحويل عبر حسابات الجمعية المعتمدة.</p>
+                        <div style="background: #f8fafc; padding: 12px; border-radius: 12px; margin-bottom: 20px; font-size: 13px; color: #334155; text-align: right; border: 1px solid #e2e8f0;">
+                            <div><strong>رقم الآيبان الرسمي:</strong> SA10 8000 0...</div>
+                            <div><strong>مصرف الراجحي</strong></div>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button id="closeModalBtn" style="background: #0f766e; color: white; border: none; padding: 12px; border-radius: 16px; font-weight: bold; cursor: pointer; flex: 1; box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.3);">تأكيد وحفظ الإيصال</button>
+                            <button id="cancelModalBtn" style="background: #e2e8f0; color: #334155; border: none; padding: 12px 16px; border-radius: 16px; font-weight: bold; cursor: pointer;">إلغاء</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            document.getElementById('closeModalBtn').onclick = () => {
+                alert('تم تسجيل رغبتك بالتبرع بنجاح. جاري تحويلك لبوابة الدفع الآمنة...');
+                modal.remove();
+            };
+            document.getElementById('cancelModalBtn').onclick = () => modal.remove();
+            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+        }
+
+        function handleBeneficiarySubmit(e) {
+            e.preventDefault();
+            const successBox = document.createElement('div');
+            successBox.innerHTML = `
+                <div style="position: fixed; inset: 0; background: rgba(15, 23, 42, 0.75); display: flex; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(12px);">
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 32px; border-radius: 24px; max-width: 400px; width: 90%; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+                        <div style="width: 64px; height: 64px; background: #ecfdf5; color: #0d9488; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 16px;">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 style="font-size: 20px; font-weight: 900; color: #0f172a; margin-bottom: 8px;">تم إرسال طلبك بنجاح!</h3>
+                        <p style="font-size: 14px; color: #475569; margin-bottom: 24px; line-height: 1.6;">تم حفظ طلبك في النظام بسرية تامة، وسيتواصل معك فريق البحث الاجتماعي بالجمعية قريباً.</p>
+                        <button id="closeSuccessBtn" style="background: #0f766e; color: white; border: none; padding: 12px 24px; border-radius: 16px; font-weight: bold; cursor: pointer; width: 100%;">تم، شكراً لكم</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(successBox);
+            document.getElementById('closeSuccessBtn').onclick = () => {
+                successBox.remove();
+                document.getElementById('beneficiaryForm').reset();
+            };
+        }
+
+        function toggleFaq(id) {
+            const content = document.getElementById('faqContent' + id);
+            const icon = document.getElementById('faqIcon' + id);
+            content.classList.toggle('hidden');
+            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+    </script>
 </body>
 </html>
